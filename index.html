@@ -1,194 +1,227 @@
 <!DOCTYPE html>
-<html>
-<title>Home - Jan Söchtig</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body {font-family: "Lato", sans-serif}
-.mySlides {display: none}
-</style>
-    
-<head>
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-    <link rel="manifest" href="favicon/site.webmanifest">
-    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
-</head>
-    
-<body>
-<!-- Navbar -->
-<div class="w3-top">
-  <div class="w3-bar w3-black w3-card">
-    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
-    <a href="project.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">PROJECT</a>
-    <a href="contract.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
-    <a href="about.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT</a>
-    <div class="w3-dropdown-hover w3-hide-small">
-      <button class="w3-padding-large w3-button" title="More">MORE <i class="fa fa-caret-down"></i></button>     
-      <div class="w3-dropdown-content w3-bar-block w3-card-4">
-          <a href="more/newzealand.html" class="w3-bar-item w3-button">New Zealand</a>
-          <a href="more/cv.html" class="w3-bar-item w3-button">CV</a>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>Projektportfolio</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Custom styles for this template -->
+    <link href="css/modern-business.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <nav
+      class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Jan Söchtig</a>
+        <!-- <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button> -->
       </div>
-    </div>
-  </div>
-</div>
+    </nav>
 
-<!-- Navbar on small screens -->
-<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
-  <a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
-  <a href="project.html" class="w3-bar-item w3-button w3-padding-large">PROJECTS</a>
-  <a href="contract.html" class="w3-bar-item w3-button w3-padding-large">CONTACT</a>
-  <a href="more.html" class="w3-bar-item w3-button w3-padding-large">MORE</a>
-</div>
+    <header>
+      
+    </header>
 
-<!-- Page content -->
-<div class="w3-content" style="max-width:2000px;margin-top:46px">
+    <!-- Page Content -->
+    <div class="container">
+      <h1 class="mt-4 mb-3">Portfolio</h1>
 
-  <!-- The Home Section -->
-  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
-    <h2 class="w3-wide">HOME</h2>
-    <p class="w3-opacity"><i>"Hello World"</i></p>
-    <p class="w3-justify">We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-      ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur
-      adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    <div class="w3-row w3-padding-32">
-      <div class="w3-third">
-        <p>Name</p>
-        <img src="/w3images/bandmember.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
-      </div>
-      <div class="w3-third">
-        <p>Name</p>
-        <img src="/w3images/bandmember.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
-      </div>
-      <div class="w3-third">
-        <p>Name</p>
-        <img src="/w3images/bandmember.jpg" class="w3-round" alt="Random Name" style="width:60%">
-      </div>
-    </div>
-  </div>
+      <!-- <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="index.html">Home</a>
+      </li>
+      <li class="breadcrumb-item active">Portfolio 1</li>
+    </ol>  -->
 
-  <!-- The Experience Section -->
-  <div class="w3-black" id="tour">
-    <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
-      <h2 class="w3-wide w3-center">EXPERIENCE</h2>
-      <p class="w3-opacity w3-center"><i>Quick Overview!</i></p><br>
-
-      <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
-        <div class="w3-third w3-margin-bottom">
-          <img src="https://pppknowledgelab.org/sites/default/files/field/special_page/icon/tools.gif" alt="Tools" style="width:100%" class="w3-hover-opacity">
-          <div class="w3-container w3-white">
-            <p><b>Tools</b></p>
-            <ul>
-                <li>Git, Bitbucket, GitHub</li>
-                <li>Jira, Maven</li>
-                <li>IntelliJ, Eclipse, Brackets, Visual Studio 2017</li>
-                <li>MySQL, Access</li>
-              </ul>
-          </div>
+      <!-- Project One -->
+      <div class="row">
+        <div class="col-md-7">
+          <a href="#">
+            <img
+              class="img-fluid rounded mb-3 mb-md-0"
+              src="assets/img/PolyTycoon700x300.png"
+              alt=""
+            />
+          </a>
         </div>
-        <div class="w3-third w3-margin-bottom">
-          <img src="https://pppknowledgelab.org/sites/default/files/field/special_page/icon/tools.gif" alt="Frameworks" style="width:100%" class="w3-hover-opacity">
-          <div class="w3-container w3-white">
-            <p><b>Frameworks</b></p>
-            <ul>
-                <li>JavaFX, Swing</li>
-                <li>LibGdx, OpenCV</li>
-                <li>Unity</li>
-                <li>p5js, Box2D</li>
-                <li>.NET, netty.io</li>
-              </ul>
-          </div>
-        </div>
-        <div class="w3-third w3-margin-bottom">
-          <img src="https://pppknowledgelab.org/sites/default/files/field/special_page/icon/tools.gif" alt="Languages" style="width:100%" class="w3-hover-opacity">
-          <div class="w3-container w3-white">
-            <p><b>Languages</b></p>
-              <ul>
-                <li>Java</li>
-                <li>Python</li>
-                <li>C#</li>
-                <li>JavaScript</li>
-                <li>VBA</li>
-              </ul>
-          </div>
+        <div class="col-md-5">
+          <h3>
+            <img
+              src="https://img.icons8.com/ios-filled/50/000000/unity.png"
+              alt="Unity"
+            />
+            Poly Tycoon
+          </h3>
+          <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.</p> -->
+          <p>
+            A 3D transport game. It features four types of transportation,
+            several different products and endless world generation. The players
+            can place production buildings and setup transport routes. The goal
+            is to maximize profits and satisfy all cities.
+          </p>
+          <!-- <p><a href="https://icons8.com/icon/39848/unity"><img src="https://img.icons8.com/ios-filled/50/000000/unity.png" alt="Unity"></a></p> -->
+          <a class="btn btn-primary" href="assets/packages/PolyTycoon_2019-05-08.rar" download>Download
+            <span class="glyphicon glyphicon-chevron-right"></span>
+          </a>
         </div>
       </div>
-    </div>
-  </div>
+      <!-- /.row -->
 
-  <!-- The Contact Section -->
-  <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
-    <h2 class="w3-wide w3-center">CONTACT</h2>
-    <p class="w3-opacity w3-center"><i></i></p>
-    <div class="w3-row w3-padding-32">
-      <div class="w3-col m6 w3-large w3-margin-bottom">
-        <i class="fa fa-map-marker" style="width:30px"></i> Oldenburg, Germany<br>
-        <i class="fa fa-envelope" style="width:30px"> </i> Email: jan.soechtig@gmail.com<br>
+      <hr />
+
+      <!-- Project Four -->
+      <div class="row">
+        <div class="col-md-7">
+          <a href="#">
+            <img
+              class="img-fluid rounded mb-3 mb-md-0"
+              src="assets/img/Smorle700x300.png"
+              alt=""
+            />
+          </a>
+        </div>
+        <div class="col-md-5">
+          <h3>
+            <img
+              src="https://img.icons8.com/ios-filled/50/000000/unity.png"
+              alt="Unity"
+            />
+            Smorle
+          </h3>
+          <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, quidem, consectetur, officia rem officiis illum aliquam perspiciatis aspernatur quod modi hic nemo qui soluta aut eius fugit quam in suscipit?</p> -->
+          <p>
+            Smorle is a simple drinking game. You can specify playernames and
+            the game will generate tasks for you. There are two types of tasks,
+            which mostly involve drinking from your cup. The goal of this game
+            is to not stay sober.
+          </p>
+          <a class="btn btn-primary" href="assets/packages/Smorle.apk" download
+            >Download
+            <span class="glyphicon glyphicon-chevron-right"></span>
+          </a>
+        </div>
       </div>
+      <!-- /.row -->
+
+      <hr />
+
+      <!-- Project Two -->
+      <div class="row">
+        <div class="col-md-7">
+          <a href="#">
+            <img
+              class="img-fluid rounded mb-3 mb-md-0"
+              src="http://placehold.it/700x300"
+              alt=""
+            />
+          </a>
+        </div>
+        <div class="col-md-5">
+          <h3>
+            <img
+              src="https://img.icons8.com/color/48/000000/java-coffee-cup-logo.png"
+            />Svillage
+          </h3>
+          <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, odit velit cumque vero doloremque repellendus distinctio maiores rem expedita a nam vitae modi quidem similique ducimus! Velit, esse totam tempore.</p> -->
+          <p>
+            A 2D top-down crafting game. It features different crafing recipes,
+            ressource gathering, small multiplayer, pathfinding enemies and
+            construction of buildings. The goal is to survive the night and
+            build a small town.
+          </p>
+          <a class="btn btn-primary" href="assets/packages/Svillage.zip" download>Download
+            <span class="glyphicon glyphicon-chevron-right"></span>
+          </a>
+        </div>
+      </div>
+      <!-- /.row -->
+
+      <hr />
+
+      <!-- Project Three -->
+      <div class="row">
+        <div class="col-md-7">
+          <a href="#">
+            <img
+              class="img-fluid rounded mb-3 mb-md-0"
+              src="http://placehold.it/700x300"
+              alt=""
+            />
+          </a>
+        </div>
+        <div class="col-md-5">
+          <h3>
+            <img
+              src="https://img.icons8.com/color/48/000000/java-coffee-cup-logo.png"
+            />Ameisenhaufen
+          </h3>
+          <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, temporibus, dolores, at, praesentium ut unde repudiandae voluptatum sit ab debitis suscipit fugiat natus velit excepturi amet commodi deleniti alias possimus!</p> -->
+          <p>
+            A 2D simulation game. It consists of an anthill in the middle of the
+            map. In the beginning your initial population of ants scatters in
+            search of food. Three different types of ants are available. The
+            goal is to have a self-sustaining anthill.
+          </p>
+          <a class="btn btn-primary" href="assets/packages/Ameisenhaufen.zip" download>Download
+            <span class="glyphicon glyphicon-chevron-right"></span>
+          </a>
+        </div>
+      </div>
+      <!-- /.row -->
+
+      <hr />
+
+      <!-- Pagination -->
+      <!-- <ul class="pagination justify-content-center">
+      <li class="page-item">
+        <a class="page-link" href="#" aria-label="Previous">
+          <span aria-hidden="true">&laquo;</span>
+          <span class="sr-only">Previous</span>
+        </a>
+      </li>
+      <li class="page-item">
+        <a class="page-link" href="#">1</a>
+      </li>
+      <li class="page-item">
+        <a class="page-link" href="#">2</a>
+      </li>
+      <li class="page-item">
+        <a class="page-link" href="#">3</a>
+      </li>
+      <li class="page-item">
+        <a class="page-link" href="#" aria-label="Next">
+          <span aria-hidden="true">&raquo;</span>
+          <span class="sr-only">Next</span>
+        </a>
+      </li>
+    </ul> -->
     </div>
-  </div>
-  
-<!-- End Page Content -->
-</div>
 
-<!-- Footer -->
-<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
-  <i class="fa fa-facebook-official w3-hover-opacity"></i>
-  <i class="fa fa-instagram w3-hover-opacity"></i>
-  <i class="fa fa-snapchat w3-hover-opacity"></i>
-  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-  <i class="fa fa-twitter w3-hover-opacity"></i>
-  <i class="fa fa-linkedin w3-hover-opacity"></i>
-  <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
-</footer>
-    
-<script>
-var connection = new autobahn.Connection({url: 'ws://127.0.0.1:9000/', realm: 'realm1'});
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <a href="https://icons8.com/icon/39848/unity"
+          >Unity & Java icon by Icons8</a
+        >
+      </div>
+      <!-- /.container -->
+    </footer>
 
-connection.onopen = function (session) {
-
-   // 1) subscribe to a topic
-   function onevent(args) {
-      console.log("Event:", args[0]);
-   }
-   session.subscribe('com.myapp.hello', onevent);
-
-   // 2) publish an event
-   session.publish('com.myapp.hello', ['Hello, world!']);
-
-   // 3) register a procedure for remoting
-   function add2(args) {
-      return args[0] + args[1];
-   }
-   session.register('com.myapp.add2', add2);
-
-   // 4) call a remote procedure
-   session.call('com.myapp.add2', [2, 3]).then(
-      function (res) {
-         console.log("Result:", res);
-      }
-   );
-};
-
-connection.open();
-    
-// Used to toggle the menu on small screens when clicking on the menu button
-function myFunction() {
-    var x = document.getElementById("navDemo");
-    if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-    } else { 
-        x.className = x.className.replace(" w3-show", "");
-    }
-}
-</script>
-
-</body>
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
