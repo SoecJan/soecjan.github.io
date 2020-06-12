@@ -1,0 +1,180 @@
+\doxysection{Transport\+Vehicle\+Controller Class Reference}
+\label{class_transport_vehicle_controller}\index{TransportVehicleController@{TransportVehicleController}}
+
+
+This controller handles the logic of a \doxyref{Transport\+Vehicle}{p.}{class_transport_vehicle}.  
+
+
+Inheritance diagram for Transport\+Vehicle\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_transport_vehicle_controller}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Transport\+Vehicle\+Controller} ()
+\item 
+\textbf{ Product\+Storage} \textbf{ Transport\+Storage} (\textbf{ Product\+Data} product\+Data)
+\begin{DoxyCompactList}\small\item\em The storage of a specified product \end{DoxyCompactList}\item 
+I\+Enumerator \textbf{ Load} (\textbf{ Transport\+Route\+Element} transport\+Route\+Element)
+\begin{DoxyCompactList}\small\item\em This function loads products from a \doxyref{I\+Product\+Emitter}{p.}{interface_i_product_emitter} into the \+\_\+transporter\+Storage. \end{DoxyCompactList}\item 
+I\+Enumerator \textbf{ Unload} (\textbf{ Transport\+Route\+Element} transport\+Route\+Element)
+\begin{DoxyCompactList}\small\item\em Product unloading logic -\/ coroutine \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ \textbf{ Product\+Data} $>$ \textbf{ Loaded\+Products} =$>$ new List$<$\textbf{ Product\+Data}$>$(\+\_\+transporter\+Storage.\+Keys)
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \textbf{ Vehicle\+Name}\hspace{0.3cm}{\ttfamily  [get, set]}
+\item 
+float \textbf{ Max\+Speed} = 2f\hspace{0.3cm}{\ttfamily  [get, set]}
+\item 
+int \textbf{ Current\+Capacity} = 0\hspace{0.3cm}{\ttfamily  [get]}
+\item 
+int \textbf{ Max\+Capacity} = 4\hspace{0.3cm}{\ttfamily  [get, set]}
+\item 
+float \textbf{ Transfer\+Time} = 1f\hspace{0.3cm}{\ttfamily  [get, set]}
+\item 
+int \textbf{ Transfer\+Amount} = 1\hspace{0.3cm}{\ttfamily  [get, set]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This controller handles the logic of a \doxyref{Transport\+Vehicle}{p.}{class_transport_vehicle}. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\label{class_transport_vehicle_controller_a59b470dbe184fb8b18f150bfbb330224}} 
+\index{TransportVehicleController@{TransportVehicleController}!TransportVehicleController@{TransportVehicleController}}
+\index{TransportVehicleController@{TransportVehicleController}!TransportVehicleController@{TransportVehicleController}}
+\doxysubsubsection{TransportVehicleController()}
+{\footnotesize\ttfamily Transport\+Vehicle\+Controller.\+Transport\+Vehicle\+Controller (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_transport_vehicle_controller_a1cd3398ae94922674bcc600abcf99e01}} 
+\index{TransportVehicleController@{TransportVehicleController}!Load@{Load}}
+\index{Load@{Load}!TransportVehicleController@{TransportVehicleController}}
+\doxysubsubsection{Load()}
+{\footnotesize\ttfamily I\+Enumerator Transport\+Vehicle\+Controller.\+Load (\begin{DoxyParamCaption}\item[{\textbf{ Transport\+Route\+Element}}]{transport\+Route\+Element }\end{DoxyParamCaption})}
+
+
+
+This function loads products from a \doxyref{I\+Product\+Emitter}{p.}{interface_i_product_emitter} into the \+\_\+transporter\+Storage. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em transport\+Route\+Element} & The current \doxyref{Transport\+Route\+Element}{p.}{class_transport_route_element} that is used by the \doxyref{Route\+Mover}{p.}{class_route_mover}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \textbf{ I\+Transport} \doxyref{}{p.}{interface_i_transport_ac1b60124b656b54297c20cddbd68d95d}.
+
+\mbox{\label{class_transport_vehicle_controller_a498edb71be29dd74981c61b88da2c0ca}} 
+\index{TransportVehicleController@{TransportVehicleController}!TransportStorage@{TransportStorage}}
+\index{TransportStorage@{TransportStorage}!TransportVehicleController@{TransportVehicleController}}
+\doxysubsubsection{TransportStorage()}
+{\footnotesize\ttfamily \textbf{ Product\+Storage} Transport\+Vehicle\+Controller.\+Transport\+Storage (\begin{DoxyParamCaption}\item[{\textbf{ Product\+Data}}]{product\+Data }\end{DoxyParamCaption})}
+
+
+
+The storage of a specified product 
+
+
+\begin{DoxyParams}{Parameters}
+{\em product\+Data} & The specified product for getting the associated storage\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Storage instance of the specified product
+\end{DoxyReturn}
+
+
+Implements \textbf{ I\+Transport} \doxyref{}{p.}{interface_i_transport_a06eb53a7138627efeb7720aaacbaa1ba}.
+
+\mbox{\label{class_transport_vehicle_controller_a054b8e83fb8623d89a3f2ed3fbc1d971}} 
+\index{TransportVehicleController@{TransportVehicleController}!Unload@{Unload}}
+\index{Unload@{Unload}!TransportVehicleController@{TransportVehicleController}}
+\doxysubsubsection{Unload()}
+{\footnotesize\ttfamily I\+Enumerator Transport\+Vehicle\+Controller.\+Unload (\begin{DoxyParamCaption}\item[{\textbf{ Transport\+Route\+Element}}]{transport\+Route\+Element }\end{DoxyParamCaption})}
+
+
+
+Product unloading logic -\/ coroutine 
+
+
+\begin{DoxyParams}{Parameters}
+{\em transport\+Route\+Element} & The current element that contains the \doxyref{Transport\+Route\+Setting}{p.}{class_transport_route_setting}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \textbf{ I\+Transport} \doxyref{}{p.}{interface_i_transport_a8d476c3d0715f396cc1be34c7cde110a}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\label{class_transport_vehicle_controller_a719201e604966c0cb78542229683ee28}} 
+\index{TransportVehicleController@{TransportVehicleController}!LoadedProducts@{LoadedProducts}}
+\index{LoadedProducts@{LoadedProducts}!TransportVehicleController@{TransportVehicleController}}
+\doxysubsubsection{LoadedProducts}
+{\footnotesize\ttfamily List$<$\textbf{ Product\+Data}$>$ Transport\+Vehicle\+Controller.\+Loaded\+Products =$>$ new List$<$\textbf{ Product\+Data}$>$(\+\_\+transporter\+Storage.\+Keys)}
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\label{class_transport_vehicle_controller_a928de024473e8dd3ae48b7f4293feaf1}} 
+\index{TransportVehicleController@{TransportVehicleController}!CurrentCapacity@{CurrentCapacity}}
+\index{CurrentCapacity@{CurrentCapacity}!TransportVehicleController@{TransportVehicleController}}
+\doxysubsubsection{CurrentCapacity}
+{\footnotesize\ttfamily int Transport\+Vehicle\+Controller.\+Current\+Capacity = 0\hspace{0.3cm}{\ttfamily [get]}}
+
+\mbox{\label{class_transport_vehicle_controller_a15ae5565fd92124952a0728dbaf74c28}} 
+\index{TransportVehicleController@{TransportVehicleController}!MaxCapacity@{MaxCapacity}}
+\index{MaxCapacity@{MaxCapacity}!TransportVehicleController@{TransportVehicleController}}
+\doxysubsubsection{MaxCapacity}
+{\footnotesize\ttfamily int Transport\+Vehicle\+Controller.\+Max\+Capacity = 4\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\label{class_transport_vehicle_controller_a1fd61c72d692103126bf5c8d512ced3b}} 
+\index{TransportVehicleController@{TransportVehicleController}!MaxSpeed@{MaxSpeed}}
+\index{MaxSpeed@{MaxSpeed}!TransportVehicleController@{TransportVehicleController}}
+\doxysubsubsection{MaxSpeed}
+{\footnotesize\ttfamily float Transport\+Vehicle\+Controller.\+Max\+Speed = 2f\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\label{class_transport_vehicle_controller_a3ec6c904cba3cf607e436d3554c5608d}} 
+\index{TransportVehicleController@{TransportVehicleController}!TransferAmount@{TransferAmount}}
+\index{TransferAmount@{TransferAmount}!TransportVehicleController@{TransportVehicleController}}
+\doxysubsubsection{TransferAmount}
+{\footnotesize\ttfamily int Transport\+Vehicle\+Controller.\+Transfer\+Amount = 1\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\label{class_transport_vehicle_controller_a78c1bc32fc8d6c95fd2f5940e73c0ef7}} 
+\index{TransportVehicleController@{TransportVehicleController}!TransferTime@{TransferTime}}
+\index{TransferTime@{TransferTime}!TransportVehicleController@{TransportVehicleController}}
+\doxysubsubsection{TransferTime}
+{\footnotesize\ttfamily float Transport\+Vehicle\+Controller.\+Transfer\+Time = 1f\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\label{class_transport_vehicle_controller_a0301b02b48207d553cec3adf2cb8f14c}} 
+\index{TransportVehicleController@{TransportVehicleController}!VehicleName@{VehicleName}}
+\index{VehicleName@{VehicleName}!TransportVehicleController@{TransportVehicleController}}
+\doxysubsubsection{VehicleName}
+{\footnotesize\ttfamily string Transport\+Vehicle\+Controller.\+Vehicle\+Name\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Poly\+Tycoon/\+Scripts/\+Model/\+Vehicle/\textbf{ Transport\+Vehicle.\+cs}\end{DoxyCompactItemize}

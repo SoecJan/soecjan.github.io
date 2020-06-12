@@ -1,0 +1,106 @@
+\doxysection{Network\+A\+Star\+Path\+Finding Class Reference}
+\label{class_network_a_star_path_finding}\index{NetworkAStarPathFinding@{NetworkAStarPathFinding}}
+
+
+This class calculates Paths form one \doxyref{Network\+Node}{p.}{class_network_node} to another \doxyref{Network\+Node}{p.}{class_network_node}.  
+
+
+Inheritance diagram for Network\+A\+Star\+Path\+Finding\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_network_a_star_path_finding}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override \textbf{ Path} \textbf{ Find\+Path} (\textbf{ Path\+Finding\+Node} start\+Node, \textbf{ Path\+Finding\+Node} end\+Node)
+\begin{DoxyCompactList}\small\item\em Calculates the shortest \doxyref{Path}{p.}{class_path} from the start\+Node to the end\+Node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \textbf{ Path} \textbf{ Retrace\+Path} (\textbf{ Path\+Finding\+Node} from\+Node, \textbf{ Network\+Node} to\+Network\+Node)
+\begin{DoxyCompactList}\small\item\em Extracts the actual \doxyref{Path}{p.}{class_path} from the found \doxyref{Network\+Node}{p.}{class_network_node}. \end{DoxyCompactList}\item 
+\textbf{ Way\+Point} \textbf{ Calculate\+Traversal\+Vectors} (\textbf{ Network\+Node} last\+Network\+Node, \textbf{ Network\+Node} current\+Network\+Node)
+\begin{DoxyCompactList}\small\item\em Returns the Traversal Vectors as a \doxyref{Way\+Point}{p.}{struct_way_point} Object from a given set of Pathfinding\+Nodes. These are used to make vehicles like trucks move on the right side of the road and make smooth turns. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class calculates Paths form one \doxyref{Network\+Node}{p.}{class_network_node} to another \doxyref{Network\+Node}{p.}{class_network_node}. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_network_a_star_path_finding_acaf354deac133b1a761c67c41a3de485}} 
+\index{NetworkAStarPathFinding@{NetworkAStarPathFinding}!CalculateTraversalVectors@{CalculateTraversalVectors}}
+\index{CalculateTraversalVectors@{CalculateTraversalVectors}!NetworkAStarPathFinding@{NetworkAStarPathFinding}}
+\doxysubsubsection{CalculateTraversalVectors()}
+{\footnotesize\ttfamily \textbf{ Way\+Point} Network\+A\+Star\+Path\+Finding.\+Calculate\+Traversal\+Vectors (\begin{DoxyParamCaption}\item[{\textbf{ Network\+Node}}]{last\+Network\+Node,  }\item[{\textbf{ Network\+Node}}]{current\+Network\+Node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Returns the Traversal Vectors as a \doxyref{Way\+Point}{p.}{struct_way_point} Object from a given set of Pathfinding\+Nodes. These are used to make vehicles like trucks move on the right side of the road and make smooth turns. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em last\+Network\+Node} & The Node the mover was on before\\
+\hline
+{\em current\+Network\+Node} & The Node the mover is currently on\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The Traversal Vectors that need to be taken
+\end{DoxyReturn}
+\mbox{\label{class_network_a_star_path_finding_af2c7412c36cda7fb6e81332693e1e38f}} 
+\index{NetworkAStarPathFinding@{NetworkAStarPathFinding}!FindPath@{FindPath}}
+\index{FindPath@{FindPath}!NetworkAStarPathFinding@{NetworkAStarPathFinding}}
+\doxysubsubsection{FindPath()}
+{\footnotesize\ttfamily override \textbf{ Path} Network\+A\+Star\+Path\+Finding.\+Find\+Path (\begin{DoxyParamCaption}\item[{\textbf{ Path\+Finding\+Node}}]{start\+Node,  }\item[{\textbf{ Path\+Finding\+Node}}]{end\+Node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Calculates the shortest \doxyref{Path}{p.}{class_path} from the start\+Node to the end\+Node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em start\+Node} & The node this path is supposed to start on\\
+\hline
+{\em end\+Node} & The node this path is supposed to end on\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \textbf{ Abstract\+Path\+Finding\+Algorithm} \doxyref{}{p.}{class_abstract_path_finding_algorithm_afb5d139c2098426a857b859a42bcbd44}.
+
+
+
+Reimplemented in \textbf{ Rail\+A\+Star\+Path\+Finding} \doxyref{}{p.}{class_rail_a_star_path_finding_acded55c98d48a005503d7b042bc57215}.
+
+\mbox{\label{class_network_a_star_path_finding_adc04f880bf1450773e1b999ccf53839e}} 
+\index{NetworkAStarPathFinding@{NetworkAStarPathFinding}!RetracePath@{RetracePath}}
+\index{RetracePath@{RetracePath}!NetworkAStarPathFinding@{NetworkAStarPathFinding}}
+\doxysubsubsection{RetracePath()}
+{\footnotesize\ttfamily virtual \textbf{ Path} Network\+A\+Star\+Path\+Finding.\+Retrace\+Path (\begin{DoxyParamCaption}\item[{\textbf{ Path\+Finding\+Node}}]{from\+Node,  }\item[{\textbf{ Network\+Node}}]{to\+Network\+Node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Extracts the actual \doxyref{Path}{p.}{class_path} from the found \doxyref{Network\+Node}{p.}{class_network_node}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em from\+Node} & The node this path was calculated from\\
+\hline
+{\em to\+Network\+Node} & The node this path was calculated to\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The path retraced from the nodes
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Poly\+Tycoon/\+Scripts/\+Model/\+Pathfinding/\+Algorithm/\textbf{ Network\+A\+Star\+Pathfinding.\+cs}\end{DoxyCompactItemize}

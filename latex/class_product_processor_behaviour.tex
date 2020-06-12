@@ -1,0 +1,129 @@
+\doxysection{Product\+Processor\+Behaviour Class Reference}
+\label{class_product_processor_behaviour}\index{ProductProcessorBehaviour@{ProductProcessorBehaviour}}
+
+
+A Factory produces products out of source products. \doxyref{Transport\+Vehicle}{p.}{class_transport_vehicle} can drive to a Factory and unload/load products.  
+
+
+Inheritance diagram for Product\+Processor\+Behaviour\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_product_processor_behaviour}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Product\+Storage} \textbf{ Emitter\+Storage} (\textbf{ Product\+Data} product\+Data=null)
+\begin{DoxyCompactList}\small\item\em \doxyref{Product\+Storage}{p.}{class_product_storage} of an emitted product. Products can be specified in the parameter but is not needed if there is only one emitted product. \end{DoxyCompactList}\item 
+List$<$ \textbf{ Product\+Data} $>$ \textbf{ Emitted\+Product\+List} ()
+\begin{DoxyCompactList}\small\item\em List of products that are emitted by this emitter. \end{DoxyCompactList}\item 
+\textbf{ Product\+Storage} \textbf{ Receiver\+Storage} (\textbf{ Product\+Data} product\+Data=null)
+\begin{DoxyCompactList}\small\item\em This function makes \doxyref{Product\+Storage}{p.}{class_product_storage} accessible that holds the received products. \end{DoxyCompactList}\item 
+List$<$ \textbf{ Product\+Data} $>$ \textbf{ Received\+Product\+List} ()
+\begin{DoxyCompactList}\small\item\em This function makes all received products accessible \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Building\+Data} \textbf{ Building\+Data}\hspace{0.3cm}{\ttfamily  [set]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A Factory produces products out of source products. \doxyref{Transport\+Vehicle}{p.}{class_transport_vehicle} can drive to a Factory and unload/load products. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_product_processor_behaviour_a238a733015bd873a75a71de4f37184d4}} 
+\index{ProductProcessorBehaviour@{ProductProcessorBehaviour}!EmittedProductList@{EmittedProductList}}
+\index{EmittedProductList@{EmittedProductList}!ProductProcessorBehaviour@{ProductProcessorBehaviour}}
+\doxysubsubsection{EmittedProductList()}
+{\footnotesize\ttfamily List$<$\textbf{ Product\+Data}$>$ Product\+Processor\+Behaviour.\+Emitted\+Product\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+List of products that are emitted by this emitter. 
+
+\begin{DoxyReturn}{Returns}
+New list that contains products that this emitter emits.
+\end{DoxyReturn}
+
+
+Implements \textbf{ I\+Product\+Emitter} \doxyref{}{p.}{interface_i_product_emitter_adc0abe4b7a3fcef69a758728400c5f53}.
+
+\mbox{\label{class_product_processor_behaviour_a3f984faea7dcae07c7e40b63a6aaeff9}} 
+\index{ProductProcessorBehaviour@{ProductProcessorBehaviour}!EmitterStorage@{EmitterStorage}}
+\index{EmitterStorage@{EmitterStorage}!ProductProcessorBehaviour@{ProductProcessorBehaviour}}
+\doxysubsubsection{EmitterStorage()}
+{\footnotesize\ttfamily \textbf{ Product\+Storage} Product\+Processor\+Behaviour.\+Emitter\+Storage (\begin{DoxyParamCaption}\item[{\textbf{ Product\+Data}}]{product\+Data = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+
+\doxyref{Product\+Storage}{p.}{class_product_storage} of an emitted product. Products can be specified in the parameter but is not needed if there is only one emitted product. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em product\+Data} & May be null. Can be used to specify a product to get the productdata\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Null\+: No Product is emitted, If input null\+: Single emitted product -\/ Null if there is more than one product emitted If input value\+: \doxyref{Product\+Storage}{p.}{class_product_storage} of the specified product or null if there is none 
+\end{DoxyReturn}
+
+
+Implements \textbf{ I\+Product\+Emitter} \doxyref{}{p.}{interface_i_product_emitter_aec0e576bc1c31762ff6d1d317d7ee3d8}.
+
+\mbox{\label{class_product_processor_behaviour_ad7a0e3796f817093def38351123addc2}} 
+\index{ProductProcessorBehaviour@{ProductProcessorBehaviour}!ReceivedProductList@{ReceivedProductList}}
+\index{ReceivedProductList@{ReceivedProductList}!ProductProcessorBehaviour@{ProductProcessorBehaviour}}
+\doxysubsubsection{ReceivedProductList()}
+{\footnotesize\ttfamily List$<$\textbf{ Product\+Data}$>$ Product\+Processor\+Behaviour.\+Received\+Product\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function makes all received products accessible 
+
+\begin{DoxyReturn}{Returns}
+A List of all received products of this entity
+\end{DoxyReturn}
+
+
+Implements \textbf{ I\+Product\+Receiver} \doxyref{}{p.}{interface_i_product_receiver_a1db7595c118a24186afae4360cda3530}.
+
+\mbox{\label{class_product_processor_behaviour_ac851a17b0ee0fd2dc43b62351aba9088}} 
+\index{ProductProcessorBehaviour@{ProductProcessorBehaviour}!ReceiverStorage@{ReceiverStorage}}
+\index{ReceiverStorage@{ReceiverStorage}!ProductProcessorBehaviour@{ProductProcessorBehaviour}}
+\doxysubsubsection{ReceiverStorage()}
+{\footnotesize\ttfamily \textbf{ Product\+Storage} Product\+Processor\+Behaviour.\+Receiver\+Storage (\begin{DoxyParamCaption}\item[{\textbf{ Product\+Data}}]{product\+Data = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+
+This function makes \doxyref{Product\+Storage}{p.}{class_product_storage} accessible that holds the received products. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em product\+Data} & (optional) specify the \doxyref{Product\+Storage}{p.}{class_product_storage} that you want to receive\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The specified \doxyref{Product\+Storage}{p.}{class_product_storage}.
+\end{DoxyReturn}
+
+
+Implements \textbf{ I\+Product\+Receiver} \doxyref{}{p.}{interface_i_product_receiver_afb1a5444446c3bf503e371802bbd7e33}.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\label{class_product_processor_behaviour_ae60dd4a660d4ee6646559a058e6fe438}} 
+\index{ProductProcessorBehaviour@{ProductProcessorBehaviour}!BuildingData@{BuildingData}}
+\index{BuildingData@{BuildingData}!ProductProcessorBehaviour@{ProductProcessorBehaviour}}
+\doxysubsubsection{BuildingData}
+{\footnotesize\ttfamily \textbf{ Building\+Data} Product\+Processor\+Behaviour.\+Building\+Data\hspace{0.3cm}{\ttfamily [set]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Poly\+Tycoon/\+Scripts/\+View/\+Behaviours/\textbf{ Product\+Processor\+Behaviour.\+cs}\end{DoxyCompactItemize}

@@ -1,0 +1,128 @@
+\doxysection{Placement\+Controller Class Reference}
+\label{class_placement_controller}\index{PlacementController@{PlacementController}}
+
+
+This class handles all user input to place a \doxyref{Simple\+Map\+Placeable}{p.}{class_simple_map_placeable} inside the Map. Collisions are handled by \doxyref{Building\+Manager}{p.}{class_building_manager}. The Ground alignment is checked by \doxyref{Terrain\+Generator}{p.}{class_terrain_generator}.  
+
+
+Inheritance diagram for Placement\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_placement_controller}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Placement\+Controller} (\textbf{ I\+Building\+Manager} building\+Manager, \textbf{ I\+Terrain\+Generator} terrain\+Generator)
+\item 
+\textbf{ Vector3} \textbf{ Move\+Object} (\textbf{ Vector3} target\+Position, \textbf{ Vector3} current\+Position, \textbf{ Vector3} offset)
+\item 
+bool \textbf{ Place\+Object} (\textbf{ Complex\+Map\+Placeable} complex\+Map\+Placeable)
+\item 
+bool \textbf{ Place\+Object} (\textbf{ Simple\+Map\+Placeable} placeable\+Object)
+\begin{DoxyCompactList}\small\item\em Places a \doxyref{Map\+Placeable}{p.}{class_map_placeable} in the world. Updates the Map\+Terrain, places the object as a child of the \doxyref{Terrain\+Chunk}{p.}{class_terrain_chunk}. Registers the Object on \doxyref{Building\+Manager}{p.}{class_building_manager}. \end{DoxyCompactList}\item 
+bool \textbf{ Is\+Placeable} (\textbf{ Vector3} position, List$<$ \textbf{ Needed\+Space} $>$ needed\+Spaces)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static System.\+Action$<$ \textbf{ Building\+Data} $>$ \textbf{ \+\_\+on\+Object\+Placement}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Building\+Data} \textbf{ Placeable\+Object\+Prefab}\hspace{0.3cm}{\ttfamily  [get, set]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class handles all user input to place a \doxyref{Simple\+Map\+Placeable}{p.}{class_simple_map_placeable} inside the Map. Collisions are handled by \doxyref{Building\+Manager}{p.}{class_building_manager}. The Ground alignment is checked by \doxyref{Terrain\+Generator}{p.}{class_terrain_generator}. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\label{class_placement_controller_ab9dce3604efce18b472ad8cafc42b9e1}} 
+\index{PlacementController@{PlacementController}!PlacementController@{PlacementController}}
+\index{PlacementController@{PlacementController}!PlacementController@{PlacementController}}
+\doxysubsubsection{PlacementController()}
+{\footnotesize\ttfamily Placement\+Controller.\+Placement\+Controller (\begin{DoxyParamCaption}\item[{\textbf{ I\+Building\+Manager}}]{building\+Manager,  }\item[{\textbf{ I\+Terrain\+Generator}}]{terrain\+Generator }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_placement_controller_a83a0437916a74037d0963bd5f6212a23}} 
+\index{PlacementController@{PlacementController}!IsPlaceable@{IsPlaceable}}
+\index{IsPlaceable@{IsPlaceable}!PlacementController@{PlacementController}}
+\doxysubsubsection{IsPlaceable()}
+{\footnotesize\ttfamily bool Placement\+Controller.\+Is\+Placeable (\begin{DoxyParamCaption}\item[{\textbf{ Vector3}}]{position,  }\item[{List$<$ \textbf{ Needed\+Space} $>$}]{needed\+Spaces }\end{DoxyParamCaption})}
+
+
+
+Implements \textbf{ I\+Placement\+Controller} \doxyref{}{p.}{interface_i_placement_controller_ae7f4ca6a612aef00c58ede27ca3ed42a}.
+
+\mbox{\label{class_placement_controller_af76342ab2a28863e8c188665a8e32f6e}} 
+\index{PlacementController@{PlacementController}!MoveObject@{MoveObject}}
+\index{MoveObject@{MoveObject}!PlacementController@{PlacementController}}
+\doxysubsubsection{MoveObject()}
+{\footnotesize\ttfamily \textbf{ Vector3} Placement\+Controller.\+Move\+Object (\begin{DoxyParamCaption}\item[{\textbf{ Vector3}}]{target\+Position,  }\item[{\textbf{ Vector3}}]{current\+Position,  }\item[{\textbf{ Vector3}}]{offset }\end{DoxyParamCaption})}
+
+
+
+Implements \textbf{ I\+Placement\+Controller} \doxyref{}{p.}{interface_i_placement_controller_a6b3a6466046d18e5e96bd7403ba35c34}.
+
+\mbox{\label{class_placement_controller_a4424d350e7ae60c3e37ac1c5df0fc581}} 
+\index{PlacementController@{PlacementController}!PlaceObject@{PlaceObject}}
+\index{PlaceObject@{PlaceObject}!PlacementController@{PlacementController}}
+\doxysubsubsection{PlaceObject()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Placement\+Controller.\+Place\+Object (\begin{DoxyParamCaption}\item[{\textbf{ Complex\+Map\+Placeable}}]{complex\+Map\+Placeable }\end{DoxyParamCaption})}
+
+
+
+Implements \textbf{ I\+Placement\+Controller} \doxyref{}{p.}{interface_i_placement_controller_a987538a6e2a2a004dfd612c273ca091a}.
+
+\mbox{\label{class_placement_controller_ae1079e96c36a8b7c3a12bafa74e8c8a5}} 
+\index{PlacementController@{PlacementController}!PlaceObject@{PlaceObject}}
+\index{PlaceObject@{PlaceObject}!PlacementController@{PlacementController}}
+\doxysubsubsection{PlaceObject()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Placement\+Controller.\+Place\+Object (\begin{DoxyParamCaption}\item[{\textbf{ Simple\+Map\+Placeable}}]{placeable\+Object }\end{DoxyParamCaption})}
+
+
+
+Places a \doxyref{Map\+Placeable}{p.}{class_map_placeable} in the world. Updates the Map\+Terrain, places the object as a child of the \doxyref{Terrain\+Chunk}{p.}{class_terrain_chunk}. Registers the Object on \doxyref{Building\+Manager}{p.}{class_building_manager}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em placeable\+Object} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \textbf{ I\+Placement\+Controller} \doxyref{}{p.}{interface_i_placement_controller_a37478690b5d322d044a8aa1e94e6630c}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\label{class_placement_controller_af8a953c54a69c86e956c6faf288b9872}} 
+\index{PlacementController@{PlacementController}!\_onObjectPlacement@{\_onObjectPlacement}}
+\index{\_onObjectPlacement@{\_onObjectPlacement}!PlacementController@{PlacementController}}
+\doxysubsubsection{\_onObjectPlacement}
+{\footnotesize\ttfamily System.\+Action$<$\textbf{ Building\+Data}$>$ Placement\+Controller.\+\_\+on\+Object\+Placement\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\label{class_placement_controller_aed9b43c8561382ed884148d8202ab21b}} 
+\index{PlacementController@{PlacementController}!PlaceableObjectPrefab@{PlaceableObjectPrefab}}
+\index{PlaceableObjectPrefab@{PlaceableObjectPrefab}!PlacementController@{PlacementController}}
+\doxysubsubsection{PlaceableObjectPrefab}
+{\footnotesize\ttfamily \textbf{ Building\+Data} Placement\+Controller.\+Placeable\+Object\+Prefab\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Poly\+Tycoon/\+Scripts/\+Controller/\textbf{ Placement\+Controller.\+cs}\end{DoxyCompactItemize}

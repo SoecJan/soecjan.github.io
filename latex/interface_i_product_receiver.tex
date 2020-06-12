@@ -1,0 +1,72 @@
+\doxysection{I\+Product\+Receiver Interface Reference}
+\label{interface_i_product_receiver}\index{IProductReceiver@{IProductReceiver}}
+
+
+This interface defines functionality for entities that need to receive products for production or use. It\textquotesingle{}s the complement to \doxyref{I\+Product\+Emitter}{p.}{interface_i_product_emitter}.  
+
+
+Inheritance diagram for I\+Product\+Receiver\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.333333cm]{interface_i_product_receiver}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Product\+Storage} \textbf{ Receiver\+Storage} ([Can\+Be\+Null] \textbf{ Product\+Data} product\+Data=null)
+\begin{DoxyCompactList}\small\item\em This function makes \doxyref{Product\+Storage}{p.}{class_product_storage} accessible that holds the received products. \end{DoxyCompactList}\item 
+List$<$ \textbf{ Product\+Data} $>$ \textbf{ Received\+Product\+List} ()
+\begin{DoxyCompactList}\small\item\em This function makes all received products accessible \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This interface defines functionality for entities that need to receive products for production or use. It\textquotesingle{}s the complement to \doxyref{I\+Product\+Emitter}{p.}{interface_i_product_emitter}. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{interface_i_product_receiver_a1db7595c118a24186afae4360cda3530}} 
+\index{IProductReceiver@{IProductReceiver}!ReceivedProductList@{ReceivedProductList}}
+\index{ReceivedProductList@{ReceivedProductList}!IProductReceiver@{IProductReceiver}}
+\doxysubsubsection{ReceivedProductList()}
+{\footnotesize\ttfamily List$<$\textbf{ Product\+Data}$>$ I\+Product\+Receiver.\+Received\+Product\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function makes all received products accessible 
+
+\begin{DoxyReturn}{Returns}
+A List of all received products of this entity
+\end{DoxyReturn}
+
+
+Implemented in \textbf{ Abstract\+Storage\+Container} \doxyref{}{p.}{class_abstract_storage_container_a0c0e11a7cd9a44ed43b7ce7a137387c1}, \textbf{ Product\+Processor\+Behaviour} \doxyref{}{p.}{class_product_processor_behaviour_ad7a0e3796f817093def38351123addc2}, \textbf{ Product\+Processor\+Controller} \doxyref{}{p.}{class_product_processor_controller_a85c613b5dbd2f7b04221c2796532aa54}, \textbf{ City\+Placeable} \doxyref{}{p.}{class_city_placeable_a5985a6c7b3cc139dad80a3bc79486442}, and \textbf{ City\+Main\+Building} \doxyref{}{p.}{class_city_main_building_a39b678d35e87f4f2d84526bd29956fd2}.
+
+\mbox{\label{interface_i_product_receiver_afb1a5444446c3bf503e371802bbd7e33}} 
+\index{IProductReceiver@{IProductReceiver}!ReceiverStorage@{ReceiverStorage}}
+\index{ReceiverStorage@{ReceiverStorage}!IProductReceiver@{IProductReceiver}}
+\doxysubsubsection{ReceiverStorage()}
+{\footnotesize\ttfamily \textbf{ Product\+Storage} I\+Product\+Receiver.\+Receiver\+Storage (\begin{DoxyParamCaption}\item[{[\+Can\+Be\+Null] \textbf{ Product\+Data}}]{product\+Data = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+
+This function makes \doxyref{Product\+Storage}{p.}{class_product_storage} accessible that holds the received products. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em product\+Data} & (optional) specify the \doxyref{Product\+Storage}{p.}{class_product_storage} that you want to receive\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The specified \doxyref{Product\+Storage}{p.}{class_product_storage}.
+\end{DoxyReturn}
+
+
+Implemented in \textbf{ Product\+Processor\+Behaviour} \doxyref{}{p.}{class_product_processor_behaviour_ac851a17b0ee0fd2dc43b62351aba9088}, \textbf{ Abstract\+Storage\+Container} \doxyref{}{p.}{class_abstract_storage_container_afbffb9600b8d847778c753893b1b57d6}, \textbf{ Product\+Processor\+Controller} \doxyref{}{p.}{class_product_processor_controller_a1d78cc7ad6ccc98ba2b1e60176bc577f}, \textbf{ City\+Placeable} \doxyref{}{p.}{class_city_placeable_a67f6f587ad6ff0996e84ba0d98da7fb6}, and \textbf{ City\+Main\+Building} \doxyref{}{p.}{class_city_main_building_a0245ca3d2bde0333601510cdbb2ed857}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Poly\+Tycoon/\+Scripts/\+Model/\+Product/\+Interfaces/\textbf{ I\+Product\+Receiver.\+cs}\end{DoxyCompactItemize}

@@ -1,0 +1,261 @@
+\doxysection{Terrain\+Generator Class Reference}
+\label{class_terrain_generator}\index{TerrainGenerator@{TerrainGenerator}}
+Inheritance diagram for Terrain\+Generator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_terrain_generator}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \textbf{ Terrain\+Type} \{ \newline
+\textbf{ Terrain\+Type.\+Obstructed}, 
+\textbf{ Terrain\+Type.\+Mountain}, 
+\textbf{ Terrain\+Type.\+Hill}, 
+\textbf{ Terrain\+Type.\+Flatland}, 
+\newline
+\textbf{ Terrain\+Type.\+Coast}, 
+\textbf{ Terrain\+Type.\+Ocean}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Terrain\+Generator} (\textbf{ Mesh\+Settings} mesh\+Settings, \textbf{ Height\+Map\+Settings} height\+Map\+Settings, Transform viewer, Material terrain\+Material, int max\+Map\+Size)
+\item 
+\textbf{ Vector2} \textbf{ Get\+Terrain\+Chunk\+Position} (float x\+Pos, float z\+Pos)
+\begin{DoxyCompactList}\small\item\em Translates a worldcoordinate to a Chunk\+Vec2 that can be used in Get\+Terrain\+Chunk(\+Vec2) \end{DoxyCompactList}\item 
+\textbf{ Terrain\+Chunk} \textbf{ Get\+Terrain\+Chunk} (\textbf{ Vector2} coordinates)
+\begin{DoxyCompactList}\small\item\em Gets a \doxyref{Terrain\+Chunk}{p.}{class_terrain_chunk} at a specified Index. \end{DoxyCompactList}\item 
+bool \textbf{ Is\+Ready} (\textbf{ Vector3} position)
+\item 
+bool \textbf{ Is\+Ready} ()
+\begin{DoxyCompactList}\small\item\em Checks to see if all visible Terrain\+Chunks received their Mesh \end{DoxyCompactList}\item 
+bool \textbf{ Transform\+Terrain\+Mesh\+To\+Object} (\textbf{ Simple\+Map\+Placeable} map\+Placeable)
+\begin{DoxyCompactList}\small\item\em Rises or Lowers the Terrain to align with any placed object \end{DoxyCompactList}\item 
+\textbf{ Terrain\+Chunk} \textbf{ Get\+Chunk} (float x, float z)
+\item 
+bool \textbf{ Is\+Suited\+Terrain} (\textbf{ Terrain\+Type} terrain\+Type, \textbf{ Vector3} position)
+\item 
+bool \textbf{ Is\+Suited\+Terrain} (\textbf{ Terrain\+Type} terrain\+Type, float x, float z)
+\item 
+void \textbf{ Update} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \textbf{ Terrain\+Placeable\+Height} =$>$ \+\_\+terrain\+Placeable\+Height
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+int \textbf{ Max\+Map\+Size}\hspace{0.3cm}{\ttfamily  [get, set]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\label{class_terrain_generator_a2a3b28d56b3ef1a5ca3ad2cda0560e07}} 
+\index{TerrainGenerator@{TerrainGenerator}!TerrainType@{TerrainType}}
+\index{TerrainType@{TerrainType}!TerrainGenerator@{TerrainGenerator}}
+\doxysubsubsection{TerrainType}
+{\footnotesize\ttfamily enum \textbf{ Terrain\+Generator.\+Terrain\+Type}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Obstructed@{Obstructed}!TerrainGenerator@{TerrainGenerator}}\index{TerrainGenerator@{TerrainGenerator}!Obstructed@{Obstructed}}}\mbox{\label{class_terrain_generator_a2a3b28d56b3ef1a5ca3ad2cda0560e07a11d2b6741acad8cb69767d00147f57a5}} 
+Obstructed&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Mountain@{Mountain}!TerrainGenerator@{TerrainGenerator}}\index{TerrainGenerator@{TerrainGenerator}!Mountain@{Mountain}}}\mbox{\label{class_terrain_generator_a2a3b28d56b3ef1a5ca3ad2cda0560e07aec9903c79dd510ffa43f69ee867a9002}} 
+Mountain&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Hill@{Hill}!TerrainGenerator@{TerrainGenerator}}\index{TerrainGenerator@{TerrainGenerator}!Hill@{Hill}}}\mbox{\label{class_terrain_generator_a2a3b28d56b3ef1a5ca3ad2cda0560e07ae7714c603656b8e2241b1131a79a009e}} 
+Hill&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Flatland@{Flatland}!TerrainGenerator@{TerrainGenerator}}\index{TerrainGenerator@{TerrainGenerator}!Flatland@{Flatland}}}\mbox{\label{class_terrain_generator_a2a3b28d56b3ef1a5ca3ad2cda0560e07afcd9b0afa820bc55c02f65c9aa276cd3}} 
+Flatland&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Coast@{Coast}!TerrainGenerator@{TerrainGenerator}}\index{TerrainGenerator@{TerrainGenerator}!Coast@{Coast}}}\mbox{\label{class_terrain_generator_a2a3b28d56b3ef1a5ca3ad2cda0560e07a44f027304a424f444963d27ad46da394}} 
+Coast&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Ocean@{Ocean}!TerrainGenerator@{TerrainGenerator}}\index{TerrainGenerator@{TerrainGenerator}!Ocean@{Ocean}}}\mbox{\label{class_terrain_generator_a2a3b28d56b3ef1a5ca3ad2cda0560e07af41054884f4a8c8cb596222e2a31f098}} 
+Ocean&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\label{class_terrain_generator_a63ea16654f5377b4898bbe9943e20928}} 
+\index{TerrainGenerator@{TerrainGenerator}!TerrainGenerator@{TerrainGenerator}}
+\index{TerrainGenerator@{TerrainGenerator}!TerrainGenerator@{TerrainGenerator}}
+\doxysubsubsection{TerrainGenerator()}
+{\footnotesize\ttfamily Terrain\+Generator.\+Terrain\+Generator (\begin{DoxyParamCaption}\item[{\textbf{ Mesh\+Settings}}]{mesh\+Settings,  }\item[{\textbf{ Height\+Map\+Settings}}]{height\+Map\+Settings,  }\item[{Transform}]{viewer,  }\item[{Material}]{terrain\+Material,  }\item[{int}]{max\+Map\+Size }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_terrain_generator_a7a60d4373c099083476f65924b209561}} 
+\index{TerrainGenerator@{TerrainGenerator}!GetChunk@{GetChunk}}
+\index{GetChunk@{GetChunk}!TerrainGenerator@{TerrainGenerator}}
+\doxysubsubsection{GetChunk()}
+{\footnotesize\ttfamily \textbf{ Terrain\+Chunk} Terrain\+Generator.\+Get\+Chunk (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{z }\end{DoxyParamCaption})}
+
+
+
+Implements \textbf{ I\+Terrain\+Generator} \doxyref{}{p.}{interface_i_terrain_generator_ab98d0e249c707c551bbd2b51f83a4f03}.
+
+\mbox{\label{class_terrain_generator_ae758e65d6ec2a0adec8a855e2d85ca97}} 
+\index{TerrainGenerator@{TerrainGenerator}!GetTerrainChunk@{GetTerrainChunk}}
+\index{GetTerrainChunk@{GetTerrainChunk}!TerrainGenerator@{TerrainGenerator}}
+\doxysubsubsection{GetTerrainChunk()}
+{\footnotesize\ttfamily \textbf{ Terrain\+Chunk} Terrain\+Generator.\+Get\+Terrain\+Chunk (\begin{DoxyParamCaption}\item[{\textbf{ Vector2}}]{coordinates }\end{DoxyParamCaption})}
+
+
+
+Gets a \doxyref{Terrain\+Chunk}{p.}{class_terrain_chunk} at a specified Index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em coordinates} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The \doxyref{Terrain\+Chunk}{p.}{class_terrain_chunk} at the specified Index. May be null
+\end{DoxyReturn}
+
+
+Implements \textbf{ I\+Terrain\+Generator} \doxyref{}{p.}{interface_i_terrain_generator_a9763e7dc396f7c28ab59b9ac8c4a23c3}.
+
+\mbox{\label{class_terrain_generator_af75f01696ae91fac4daa774c2d434c51}} 
+\index{TerrainGenerator@{TerrainGenerator}!GetTerrainChunkPosition@{GetTerrainChunkPosition}}
+\index{GetTerrainChunkPosition@{GetTerrainChunkPosition}!TerrainGenerator@{TerrainGenerator}}
+\doxysubsubsection{GetTerrainChunkPosition()}
+{\footnotesize\ttfamily \textbf{ Vector2} Terrain\+Generator.\+Get\+Terrain\+Chunk\+Position (\begin{DoxyParamCaption}\item[{float}]{x\+Pos,  }\item[{float}]{z\+Pos }\end{DoxyParamCaption})}
+
+
+
+Translates a worldcoordinate to a Chunk\+Vec2 that can be used in Get\+Terrain\+Chunk(\+Vec2) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x\+Pos} & \\
+\hline
+{\em z\+Pos} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vec2 of the \doxyref{Terrain\+Chunk}{p.}{class_terrain_chunk} that contains the given positions
+\end{DoxyReturn}
+
+
+Implements \textbf{ I\+Terrain\+Generator} \doxyref{}{p.}{interface_i_terrain_generator_aa98ef0e6195704035da2f6835e56558a}.
+
+\mbox{\label{class_terrain_generator_a13f458b1194ebff2d7a64e1f115593c4}} 
+\index{TerrainGenerator@{TerrainGenerator}!IsReady@{IsReady}}
+\index{IsReady@{IsReady}!TerrainGenerator@{TerrainGenerator}}
+\doxysubsubsection{IsReady()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Terrain\+Generator.\+Is\+Ready (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Checks to see if all visible Terrain\+Chunks received their Mesh 
+
+\begin{DoxyReturn}{Returns}
+true if all Terrain\+Chunks received their mesh
+\end{DoxyReturn}
+
+
+Implements \textbf{ I\+Terrain\+Generator} \doxyref{}{p.}{interface_i_terrain_generator_a232c9ca66d553086304c2850c8ece846}.
+
+\mbox{\label{class_terrain_generator_a65a4951f3f687fa5c6f1ab0efc360b68}} 
+\index{TerrainGenerator@{TerrainGenerator}!IsReady@{IsReady}}
+\index{IsReady@{IsReady}!TerrainGenerator@{TerrainGenerator}}
+\doxysubsubsection{IsReady()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Terrain\+Generator.\+Is\+Ready (\begin{DoxyParamCaption}\item[{\textbf{ Vector3}}]{position }\end{DoxyParamCaption})}
+
+
+
+Implements \textbf{ I\+Terrain\+Generator} \doxyref{}{p.}{interface_i_terrain_generator_a5791425d70a3f77b6cb97a9004a4436d}.
+
+\mbox{\label{class_terrain_generator_aac4b43a9d463fc5802f18b581262c51e}} 
+\index{TerrainGenerator@{TerrainGenerator}!IsSuitedTerrain@{IsSuitedTerrain}}
+\index{IsSuitedTerrain@{IsSuitedTerrain}!TerrainGenerator@{TerrainGenerator}}
+\doxysubsubsection{IsSuitedTerrain()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Terrain\+Generator.\+Is\+Suited\+Terrain (\begin{DoxyParamCaption}\item[{\textbf{ Terrain\+Type}}]{terrain\+Type,  }\item[{float}]{x,  }\item[{float}]{z }\end{DoxyParamCaption})}
+
+
+
+Implements \textbf{ I\+Terrain\+Generator} \doxyref{}{p.}{interface_i_terrain_generator_adc53c23d324cd1b269f4eb0e2f6d32af}.
+
+\mbox{\label{class_terrain_generator_a619d2f7a31f457c55322a08a23d076dc}} 
+\index{TerrainGenerator@{TerrainGenerator}!IsSuitedTerrain@{IsSuitedTerrain}}
+\index{IsSuitedTerrain@{IsSuitedTerrain}!TerrainGenerator@{TerrainGenerator}}
+\doxysubsubsection{IsSuitedTerrain()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Terrain\+Generator.\+Is\+Suited\+Terrain (\begin{DoxyParamCaption}\item[{\textbf{ Terrain\+Type}}]{terrain\+Type,  }\item[{\textbf{ Vector3}}]{position }\end{DoxyParamCaption})}
+
+
+
+Implements \textbf{ I\+Terrain\+Generator} \doxyref{}{p.}{interface_i_terrain_generator_a80605f1e0438875c1086065b3f157133}.
+
+\mbox{\label{class_terrain_generator_ae4fe75c41d246fe77c5e6710f705ecf7}} 
+\index{TerrainGenerator@{TerrainGenerator}!TransformTerrainMeshToObject@{TransformTerrainMeshToObject}}
+\index{TransformTerrainMeshToObject@{TransformTerrainMeshToObject}!TerrainGenerator@{TerrainGenerator}}
+\doxysubsubsection{TransformTerrainMeshToObject()}
+{\footnotesize\ttfamily bool Terrain\+Generator.\+Transform\+Terrain\+Mesh\+To\+Object (\begin{DoxyParamCaption}\item[{\textbf{ Simple\+Map\+Placeable}}]{map\+Placeable }\end{DoxyParamCaption})}
+
+
+
+Rises or Lowers the Terrain to align with any placed object 
+
+
+\begin{DoxyParams}{Parameters}
+{\em terrain\+Chunk} & \\
+\hline
+{\em object\+Position} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true on successful Terrain Transformation
+\end{DoxyReturn}
+
+
+Implements \textbf{ I\+Terrain\+Generator} \doxyref{}{p.}{interface_i_terrain_generator_a3b3f30d1dacd6961f5290b4931e8459c}.
+
+\mbox{\label{class_terrain_generator_a9819b1123ad591ca53caeae6101e2535}} 
+\index{TerrainGenerator@{TerrainGenerator}!Update@{Update}}
+\index{Update@{Update}!TerrainGenerator@{TerrainGenerator}}
+\doxysubsubsection{Update()}
+{\footnotesize\ttfamily void Terrain\+Generator.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Implements \textbf{ I\+Terrain\+Generator} \doxyref{}{p.}{interface_i_terrain_generator_accadb2f4cd9fc780a48f2a1daa0a540b}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\label{class_terrain_generator_a4e753ffb1f41b6a5d1743f06e6eac930}} 
+\index{TerrainGenerator@{TerrainGenerator}!TerrainPlaceableHeight@{TerrainPlaceableHeight}}
+\index{TerrainPlaceableHeight@{TerrainPlaceableHeight}!TerrainGenerator@{TerrainGenerator}}
+\doxysubsubsection{TerrainPlaceableHeight}
+{\footnotesize\ttfamily float Terrain\+Generator.\+Terrain\+Placeable\+Height =$>$ \+\_\+terrain\+Placeable\+Height}
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\label{class_terrain_generator_ad8d566bf6cbef11f64bfcce4f80e8740}} 
+\index{TerrainGenerator@{TerrainGenerator}!MaxMapSize@{MaxMapSize}}
+\index{MaxMapSize@{MaxMapSize}!TerrainGenerator@{TerrainGenerator}}
+\doxysubsubsection{MaxMapSize}
+{\footnotesize\ttfamily int Terrain\+Generator.\+Max\+Map\+Size\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Poly\+Tycoon/\+Scripts/\+Controller/\+Terrain/\textbf{ Terrain\+Generator.\+cs}\end{DoxyCompactItemize}

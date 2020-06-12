@@ -1,0 +1,139 @@
+\doxysection{Building\+Manager Class Reference}
+\label{class_building_manager}\index{BuildingManager@{BuildingManager}}
+
+
+This class keeps track of all placed objects in the game. There may always only be one instance of this class. Any placed buildings are supplied by \doxyref{Placement\+Controller}{p.}{class_placement_controller}. Is used by \doxyref{Simple\+Map\+Placeable}{p.}{class_simple_map_placeable} to check adjacent tiles for other \doxyref{Simple\+Map\+Placeable}{p.}{class_simple_map_placeable}s.  
+
+
+Inheritance diagram for Building\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_building_manager}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Building\+Manager} ()
+\item 
+\textbf{ Simple\+Map\+Placeable} \textbf{ Get\+Map\+Placeable} (\textbf{ Vector3} position)
+\item 
+\textbf{ Path\+Finding\+Node} \textbf{ Get\+Node} (\textbf{ Vector3} position)
+\item 
+bool \textbf{ Is\+Placeable} (\textbf{ Vector3} position, List$<$ \textbf{ Needed\+Space} $>$ needed\+Spaces)
+\begin{DoxyCompactList}\small\item\em Checks if a \doxyref{Map\+Placeable}{p.}{class_map_placeable} can be placed at it\textquotesingle{}s postition without changing the building\+Dictionary \end{DoxyCompactList}\item 
+void \textbf{ Add\+Map\+Placeable} (\textbf{ Simple\+Map\+Placeable} placed\+Object)
+\begin{DoxyCompactList}\small\item\em Adds a \doxyref{Map\+Placeable}{p.}{class_map_placeable} to the placed\+Building\+Dictionary \end{DoxyCompactList}\item 
+void \textbf{ Remove\+Map\+Placeable} (\textbf{ Vector3} position)
+\begin{DoxyCompactList}\small\item\em Removes a \doxyref{Map\+Placeable}{p.}{class_map_placeable} at the specified position. \end{DoxyCompactList}\item 
+void \textbf{ On\+Placeable\+Click} (\textbf{ Simple\+Map\+Placeable} map\+Placeable)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class keeps track of all placed objects in the game. There may always only be one instance of this class. Any placed buildings are supplied by \doxyref{Placement\+Controller}{p.}{class_placement_controller}. Is used by \doxyref{Simple\+Map\+Placeable}{p.}{class_simple_map_placeable} to check adjacent tiles for other \doxyref{Simple\+Map\+Placeable}{p.}{class_simple_map_placeable}s. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\label{class_building_manager_a8ebb53399e6981fd327b1538cb420378}} 
+\index{BuildingManager@{BuildingManager}!BuildingManager@{BuildingManager}}
+\index{BuildingManager@{BuildingManager}!BuildingManager@{BuildingManager}}
+\doxysubsubsection{BuildingManager()}
+{\footnotesize\ttfamily Building\+Manager.\+Building\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_building_manager_a4dd9464c260021e215670452a8960a1d}} 
+\index{BuildingManager@{BuildingManager}!AddMapPlaceable@{AddMapPlaceable}}
+\index{AddMapPlaceable@{AddMapPlaceable}!BuildingManager@{BuildingManager}}
+\doxysubsubsection{AddMapPlaceable()}
+{\footnotesize\ttfamily void Building\+Manager.\+Add\+Map\+Placeable (\begin{DoxyParamCaption}\item[{\textbf{ Simple\+Map\+Placeable}}]{placed\+Object }\end{DoxyParamCaption})}
+
+
+
+Adds a \doxyref{Map\+Placeable}{p.}{class_map_placeable} to the placed\+Building\+Dictionary 
+
+
+\begin{DoxyParams}{Parameters}
+{\em placed\+Object} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \textbf{ I\+Building\+Manager} \doxyref{}{p.}{interface_i_building_manager_a53b69cd3029f6274d97922bd31d2afa7}.
+
+\mbox{\label{class_building_manager_ad21ea15ea4dc691bba1eea81efadcf37}} 
+\index{BuildingManager@{BuildingManager}!GetMapPlaceable@{GetMapPlaceable}}
+\index{GetMapPlaceable@{GetMapPlaceable}!BuildingManager@{BuildingManager}}
+\doxysubsubsection{GetMapPlaceable()}
+{\footnotesize\ttfamily \textbf{ Simple\+Map\+Placeable} Building\+Manager.\+Get\+Map\+Placeable (\begin{DoxyParamCaption}\item[{\textbf{ Vector3}}]{position }\end{DoxyParamCaption})}
+
+\mbox{\label{class_building_manager_acd1ad4305fd501cf54c5a2a27649c339}} 
+\index{BuildingManager@{BuildingManager}!GetNode@{GetNode}}
+\index{GetNode@{GetNode}!BuildingManager@{BuildingManager}}
+\doxysubsubsection{GetNode()}
+{\footnotesize\ttfamily \textbf{ Path\+Finding\+Node} Building\+Manager.\+Get\+Node (\begin{DoxyParamCaption}\item[{\textbf{ Vector3}}]{position }\end{DoxyParamCaption})}
+
+
+
+Implements \textbf{ I\+Building\+Manager} \doxyref{}{p.}{interface_i_building_manager_a318a19ee75bd7ddd11bb5122e03e7b3b}.
+
+\mbox{\label{class_building_manager_a3aee8f7216df4dbae702a194b7b5f379}} 
+\index{BuildingManager@{BuildingManager}!IsPlaceable@{IsPlaceable}}
+\index{IsPlaceable@{IsPlaceable}!BuildingManager@{BuildingManager}}
+\doxysubsubsection{IsPlaceable()}
+{\footnotesize\ttfamily bool Building\+Manager.\+Is\+Placeable (\begin{DoxyParamCaption}\item[{\textbf{ Vector3}}]{position,  }\item[{List$<$ \textbf{ Needed\+Space} $>$}]{needed\+Spaces }\end{DoxyParamCaption})}
+
+
+
+Checks if a \doxyref{Map\+Placeable}{p.}{class_map_placeable} can be placed at it\textquotesingle{}s postition without changing the building\+Dictionary 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \textbf{ I\+Building\+Manager} \doxyref{}{p.}{interface_i_building_manager_ae9cea23f7ec639c7f68cd82d01256751}.
+
+\mbox{\label{class_building_manager_a2de70bec0a995f3588198c443eff1ab6}} 
+\index{BuildingManager@{BuildingManager}!OnPlaceableClick@{OnPlaceableClick}}
+\index{OnPlaceableClick@{OnPlaceableClick}!BuildingManager@{BuildingManager}}
+\doxysubsubsection{OnPlaceableClick()}
+{\footnotesize\ttfamily void Building\+Manager.\+On\+Placeable\+Click (\begin{DoxyParamCaption}\item[{\textbf{ Simple\+Map\+Placeable}}]{map\+Placeable }\end{DoxyParamCaption})}
+
+
+
+Implements \textbf{ I\+Building\+Manager} \doxyref{}{p.}{interface_i_building_manager_a6188f19f967fefa2418098cf3b10daad}.
+
+\mbox{\label{class_building_manager_a0f92f430107a36978da383025685e75a}} 
+\index{BuildingManager@{BuildingManager}!RemoveMapPlaceable@{RemoveMapPlaceable}}
+\index{RemoveMapPlaceable@{RemoveMapPlaceable}!BuildingManager@{BuildingManager}}
+\doxysubsubsection{RemoveMapPlaceable()}
+{\footnotesize\ttfamily void Building\+Manager.\+Remove\+Map\+Placeable (\begin{DoxyParamCaption}\item[{\textbf{ Vector3}}]{position }\end{DoxyParamCaption})}
+
+
+
+Removes a \doxyref{Map\+Placeable}{p.}{class_map_placeable} at the specified position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The removed \doxyref{Map\+Placeable}{p.}{class_map_placeable}. May be null
+\end{DoxyReturn}
+
+
+Implements \textbf{ I\+Building\+Manager} \doxyref{}{p.}{interface_i_building_manager_a509256c24f6356eaea3c62dba677187b}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Poly\+Tycoon/\+Scripts/\+Controller/\+Managers/\textbf{ Building\+Manager.\+cs}\end{DoxyCompactItemize}

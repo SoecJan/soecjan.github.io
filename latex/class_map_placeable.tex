@@ -1,0 +1,155 @@
+\doxysection{Map\+Placeable Class Reference}
+\label{class_map_placeable}\index{MapPlaceable@{MapPlaceable}}
+
+
+Map\+Placeables are objects that can be placed in the game by the user.  
+
+
+Inheritance diagram for Map\+Placeable\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.935743cm]{class_map_placeable}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \textbf{ Awake} ()
+\item 
+virtual void \textbf{ Start} ()
+\item 
+virtual void \textbf{ Rotate} (\textbf{ Vector3} axis, float rotation\+Amount)
+\begin{DoxyCompactList}\small\item\em Rotates the \doxyref{Map\+Placeable}{p.}{class_map_placeable} by rotation\+Amount degrees. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \textbf{ \+\_\+is\+Highlightable} = true
+\item 
+Renderer \textbf{ child\+Renderer}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static readonly int \textbf{ Is\+Placed\+Property} = Shader.\+Property\+To\+ID(\char`\"{}\+\_\+\+Is\+Placed\char`\"{})
+\item 
+static readonly int \textbf{ Is\+Placeable\+Property} = Shader.\+Property\+To\+ID(\char`\"{}\+\_\+\+Is\+Placeable\char`\"{})
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+bool \textbf{ Is\+Draggable}\hspace{0.3cm}{\ttfamily  [get, set]}
+\item 
+Material \textbf{ Renderer\+Material}\hspace{0.3cm}{\ttfamily  [get, set]}
+\item 
+bool? \textbf{ Is\+Placeable}\hspace{0.3cm}{\ttfamily  [set]}
+\item 
+\textbf{ Outline} \textbf{ Outline}\hspace{0.3cm}{\ttfamily  [get]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Map\+Placeables are objects that can be placed in the game by the user. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_map_placeable_afdcde3cba6defd167aec535dfb4325aa}} 
+\index{MapPlaceable@{MapPlaceable}!Awake@{Awake}}
+\index{Awake@{Awake}!MapPlaceable@{MapPlaceable}}
+\doxysubsubsection{Awake()}
+{\footnotesize\ttfamily virtual void Map\+Placeable.\+Awake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \textbf{ Simple\+Map\+Placeable} \doxyref{}{p.}{class_simple_map_placeable_a15e80ebc1db02ca9e324cd2d9d4a90e1}.
+
+\mbox{\label{class_map_placeable_aa0ba6bf637f5e4f58ae17d9d6b833b6f}} 
+\index{MapPlaceable@{MapPlaceable}!Rotate@{Rotate}}
+\index{Rotate@{Rotate}!MapPlaceable@{MapPlaceable}}
+\doxysubsubsection{Rotate()}
+{\footnotesize\ttfamily virtual void Map\+Placeable.\+Rotate (\begin{DoxyParamCaption}\item[{\textbf{ Vector3}}]{axis,  }\item[{float}]{rotation\+Amount }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Rotates the \doxyref{Map\+Placeable}{p.}{class_map_placeable} by rotation\+Amount degrees. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em axis} & The axis of rotation\\
+\hline
+{\em rotation\+Amount} & The amount of rotation in degrees. 90f = 90° of rotation.\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \textbf{ Simple\+Map\+Placeable} \doxyref{}{p.}{class_simple_map_placeable_a1a4a04226e7b198414e75b0f7667ff7e}, \textbf{ Complex\+Map\+Placeable} \doxyref{}{p.}{class_complex_map_placeable_a4c1aca665ca5ce04b05df8246bb44fe9}, and \textbf{ Path\+Finding\+Connector} \doxyref{}{p.}{class_path_finding_connector_aa97a46892449ba187b6418ce7d59e410}.
+
+\mbox{\label{class_map_placeable_aac4a0bc7146ddf83de104e92984b821c}} 
+\index{MapPlaceable@{MapPlaceable}!Start@{Start}}
+\index{Start@{Start}!MapPlaceable@{MapPlaceable}}
+\doxysubsubsection{Start()}
+{\footnotesize\ttfamily virtual void Map\+Placeable.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \textbf{ City\+Placeable} \doxyref{}{p.}{class_city_placeable_aa1ffba9ef1079e5f9fef7cb78fcd236d}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\label{class_map_placeable_a9f383bfc0eec1ee15a1100fec28dc7df}} 
+\index{MapPlaceable@{MapPlaceable}!\_isHighlightable@{\_isHighlightable}}
+\index{\_isHighlightable@{\_isHighlightable}!MapPlaceable@{MapPlaceable}}
+\doxysubsubsection{\_isHighlightable}
+{\footnotesize\ttfamily bool Map\+Placeable.\+\_\+is\+Highlightable = true\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\label{class_map_placeable_a01b1bc7d375609a28e6eae87d5c24c51}} 
+\index{MapPlaceable@{MapPlaceable}!childRenderer@{childRenderer}}
+\index{childRenderer@{childRenderer}!MapPlaceable@{MapPlaceable}}
+\doxysubsubsection{childRenderer}
+{\footnotesize\ttfamily Renderer Map\+Placeable.\+child\+Renderer\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\label{class_map_placeable_a4c90c355f91e46f61e2a54ae83cea6c0}} 
+\index{MapPlaceable@{MapPlaceable}!IsPlaceableProperty@{IsPlaceableProperty}}
+\index{IsPlaceableProperty@{IsPlaceableProperty}!MapPlaceable@{MapPlaceable}}
+\doxysubsubsection{IsPlaceableProperty}
+{\footnotesize\ttfamily readonly int Map\+Placeable.\+Is\+Placeable\+Property = Shader.\+Property\+To\+ID(\char`\"{}\+\_\+\+Is\+Placeable\char`\"{})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\mbox{\label{class_map_placeable_ac9bef4b11d0b1af70de0462c673fd34a}} 
+\index{MapPlaceable@{MapPlaceable}!IsPlacedProperty@{IsPlacedProperty}}
+\index{IsPlacedProperty@{IsPlacedProperty}!MapPlaceable@{MapPlaceable}}
+\doxysubsubsection{IsPlacedProperty}
+{\footnotesize\ttfamily readonly int Map\+Placeable.\+Is\+Placed\+Property = Shader.\+Property\+To\+ID(\char`\"{}\+\_\+\+Is\+Placed\char`\"{})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\label{class_map_placeable_a3356902a726ef0a93cc60058c3470fb1}} 
+\index{MapPlaceable@{MapPlaceable}!IsDraggable@{IsDraggable}}
+\index{IsDraggable@{IsDraggable}!MapPlaceable@{MapPlaceable}}
+\doxysubsubsection{IsDraggable}
+{\footnotesize\ttfamily bool Map\+Placeable.\+Is\+Draggable\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\label{class_map_placeable_ae2873ee6454e67237c373844dac0ed3d}} 
+\index{MapPlaceable@{MapPlaceable}!IsPlaceable@{IsPlaceable}}
+\index{IsPlaceable@{IsPlaceable}!MapPlaceable@{MapPlaceable}}
+\doxysubsubsection{IsPlaceable}
+{\footnotesize\ttfamily bool? Map\+Placeable.\+Is\+Placeable\hspace{0.3cm}{\ttfamily [set]}}
+
+\mbox{\label{class_map_placeable_a67e2d0f316a56fd4d4317e96dc7dcf7a}} 
+\index{MapPlaceable@{MapPlaceable}!Outline@{Outline}}
+\index{Outline@{Outline}!MapPlaceable@{MapPlaceable}}
+\doxysubsubsection{Outline}
+{\footnotesize\ttfamily \textbf{ Outline} Map\+Placeable.\+Outline\hspace{0.3cm}{\ttfamily [get]}}
+
+\mbox{\label{class_map_placeable_af8f7f51219a92e922260d83ffba264d1}} 
+\index{MapPlaceable@{MapPlaceable}!RendererMaterial@{RendererMaterial}}
+\index{RendererMaterial@{RendererMaterial}!MapPlaceable@{MapPlaceable}}
+\doxysubsubsection{RendererMaterial}
+{\footnotesize\ttfamily Material Map\+Placeable.\+Renderer\+Material\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}, {\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Poly\+Tycoon/\+Scripts/\+Model/\+Placement/\textbf{ Map\+Placeable.\+cs}\end{DoxyCompactItemize}

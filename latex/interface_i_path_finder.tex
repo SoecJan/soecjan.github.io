@@ -1,0 +1,55 @@
+\doxysection{I\+Path\+Finder Interface Reference}
+\label{interface_i_path_finder}\index{IPathFinder@{IPathFinder}}
+
+
+This interface describes functionality for a \doxyref{Path\+Finder}{p.}{class_path_finder}  
+
+
+Inheritance diagram for I\+Path\+Finder\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_i_path_finder}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ \textbf{ Transport\+Route\+Element} $>$ \textbf{ Find\+Path} (\textbf{ Transport\+Vehicle\+Data} transport\+Vehicle\+Data, List$<$ \textbf{ Transport\+Route\+Element} $>$ transport\+Route\+Elements)
+\begin{DoxyCompactList}\small\item\em Finds Paths for the given \doxyref{Transport\+Route\+Element}{p.}{class_transport_route_element} based on the given \doxyref{Transport\+Vehicle\+Data}{p.}{class_transport_vehicle_data} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This interface describes functionality for a \doxyref{Path\+Finder}{p.}{class_path_finder} 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{interface_i_path_finder_af5a3e811a2d2f32a919388b357059e3c}} 
+\index{IPathFinder@{IPathFinder}!FindPath@{FindPath}}
+\index{FindPath@{FindPath}!IPathFinder@{IPathFinder}}
+\doxysubsubsection{FindPath()}
+{\footnotesize\ttfamily List$<$\textbf{ Transport\+Route\+Element}$>$ I\+Path\+Finder.\+Find\+Path (\begin{DoxyParamCaption}\item[{\textbf{ Transport\+Vehicle\+Data}}]{transport\+Vehicle\+Data,  }\item[{List$<$ \textbf{ Transport\+Route\+Element} $>$}]{transport\+Route\+Elements }\end{DoxyParamCaption})}
+
+
+
+Finds Paths for the given \doxyref{Transport\+Route\+Element}{p.}{class_transport_route_element} based on the given \doxyref{Transport\+Vehicle\+Data}{p.}{class_transport_vehicle_data} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em transport\+Vehicle\+Data} & The vehicle that is going to use the path\\
+\hline
+{\em transport\+Route\+Elements} & The route that needs to be calculated\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The populated List of Transport\+Route\+Elements
+\end{DoxyReturn}
+
+
+Implemented in \textbf{ Path\+Finder} \doxyref{}{p.}{class_path_finder_adc56d536c349d1049880e8f988e16561}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Poly\+Tycoon/\+Scripts/\+Model/\+Pathfinding/\textbf{ Path\+Finder.\+cs}\end{DoxyCompactItemize}
