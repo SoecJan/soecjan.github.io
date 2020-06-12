@@ -89,6 +89,8 @@ Protected Attributes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
 Properties</h2></td></tr>
+<tr class="memitem:a10a70fed07d72d0aa86bfcbdd006ff46"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_transport_vehicle_data_8cs.html#ae093c9a96eda0463cdd2501ba83f10c3">PathType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_waypoint_mover.html#a10a70fed07d72d0aa86bfcbdd006ff46">PathType</a><code> [get, set]</code></td></tr>
+<tr class="separator:a10a70fed07d72d0aa86bfcbdd006ff46"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa50e9473922db5fd6e6016f157fd5e23"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_waypoint_mover.html#aa50e9473922db5fd6e6016f157fd5e23">CurrentSpeed</a><code> [get, set]</code></td></tr>
 <tr class="separator:aa50e9473922db5fd6e6016f157fd5e23"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a33326b823167c943398dce42dc5a721f"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_waypoint_mover.html#a33326b823167c943398dce42dc5a721f">MaxSpeed</a><code> [get, set]</code></td></tr>
@@ -101,6 +103,10 @@ Properties</h2></td></tr>
 <tr class="separator:a042c8483edc4ca4ff29b98a054a2d47f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f2193eaf81e8a597c0ae9b2f14bed04"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="struct_way_point.html">WayPoint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_waypoint_mover.html#a6f2193eaf81e8a597c0ae9b2f14bed04">WaypointList</a><code> [get, set]</code></td></tr>
 <tr class="separator:a6f2193eaf81e8a597c0ae9b2f14bed04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a376a89e07e3e5b7f5b3e7ef049543aa1"><td class="memItemLeft" align="right" valign="top">AnimationCurve&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_waypoint_mover.html#a376a89e07e3e5b7f5b3e7ef049543aa1">AccelerationCurve</a><code> [get, set]</code></td></tr>
+<tr class="separator:a376a89e07e3e5b7f5b3e7ef049543aa1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e9c7d859501b21daa90a57561b650bb"><td class="memItemLeft" align="right" valign="top">AnimationCurve&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_waypoint_mover.html#a7e9c7d859501b21daa90a57561b650bb">DecelerationCurve</a><code> [get, set]</code></td></tr>
+<tr class="separator:a7e9c7d859501b21daa90a57561b650bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a48a916ab10c31772337bc554a8b6741d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_waypoint_mover.html#a48a916ab10c31772337bc554a8b6741d">CurrentWaypointIndex</a><code> [get, set]</code></td></tr>
 <tr class="separator:a48a916ab10c31772337bc554a8b6741d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a78ea4a001afea6c9b3b7221440592470"><td class="memItemLeft" align="right" valign="top">Transform&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_waypoint_mover.html#a78ea4a001afea6c9b3b7221440592470">MoverTransform</a><code> [get, set]</code></td></tr>
@@ -130,6 +136,28 @@ Properties</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
+<a id="a376a89e07e3e5b7f5b3e7ef049543aa1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a376a89e07e3e5b7f5b3e7ef049543aa1">&#9670;&nbsp;</a></span>AccelerationCurve</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">AnimationCurve WaypointMover.AccelerationCurve</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="aa50e9473922db5fd6e6016f157fd5e23"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa50e9473922db5fd6e6016f157fd5e23">&#9670;&nbsp;</a></span>CurrentSpeed</h2>
 
@@ -163,6 +191,28 @@ Properties</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">int WaypointMover.CurrentWaypointIndex</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7e9c7d859501b21daa90a57561b650bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e9c7d859501b21daa90a57561b650bb">&#9670;&nbsp;</a></span>DecelerationCurve</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">AnimationCurve WaypointMover.DecelerationCurve</td>
         </tr>
       </table>
   </td>
@@ -251,6 +301,28 @@ Properties</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">Action WaypointMover.OnDepart</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a10a70fed07d72d0aa86bfcbdd006ff46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10a70fed07d72d0aa86bfcbdd006ff46">&#9670;&nbsp;</a></span>PathType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_transport_vehicle_data_8cs.html#ae093c9a96eda0463cdd2501ba83f10c3">PathType</a> WaypointMover.PathType</td>
         </tr>
       </table>
   </td>
