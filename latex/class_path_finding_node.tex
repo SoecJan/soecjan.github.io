@@ -1,0 +1,209 @@
+\doxysection{Path\+Finding\+Node Class Reference}
+\label{class_path_finding_node}\index{PathFindingNode@{PathFindingNode}}
+
+
+All objects that are supposed to be reached by a vehicle need to have this component. After successful registration at \doxyref{Building\+Manager}{p.}{class_building_manager} \doxyref{Building\+Manager}{p.}{class_building_manager} this component searches for connected Node, using \doxyref{Path\+Finding\+Node.\+On\+Placement}{p.}{class_path_finding_node_ae7b55fb42208c1c04ab17143a04791d3} in adjacent tiles. \doxyref{Path\+Finding\+Node.\+On\+Destroy}{p.}{class_path_finding_node_a15c03a7649984db46ecbeceeaca2cd4e} handles the cleanup after a street is destroyed.  
+
+
+Inheritance diagram for Path\+Finding\+Node\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.722891cm]{class_path_finding_node}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+abstract bool \textbf{ Is\+Traversable} ()
+\item 
+override void \textbf{ On\+Placement} ()
+\begin{DoxyCompactList}\small\item\em Searches for neighbor streets after being placed on the map \end{DoxyCompactList}\item 
+abstract \textbf{ Way\+Point} \textbf{ Get\+Traversal\+Vectors} (int from\+Direction, int to\+Direction)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const int \textbf{ Up} = 0
+\item 
+const int \textbf{ Right} = 1
+\item 
+const int \textbf{ Down} = 2
+\item 
+const int \textbf{ Left} = 3
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+abstract bool \textbf{ Is\+Node} ()
+\item 
+virtual \textbf{ Path\+Finding\+Node} \textbf{ Adjacent\+Nodes} (int i)
+\item 
+override void \textbf{ Initialize} ()
+\item 
+void \textbf{ On\+Draw\+Gizmos} ()
+\item 
+void \textbf{ On\+Destroy} ()
+\begin{DoxyCompactList}\small\item\em Cleans up on this object after it has been destroyed \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Path\+Finding\+Node}[$\,$] \textbf{ Neighbor\+Nodes}\hspace{0.3cm}{\ttfamily  [get]}
+\item 
+static int \textbf{ Total\+Node\+Count}\hspace{0.3cm}{\ttfamily  [get]}
+\item 
+virtual \textbf{ Vector3} \textbf{ Traversal\+Offset}\hspace{0.3cm}{\ttfamily  [get, set]}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+All objects that are supposed to be reached by a vehicle need to have this component. After successful registration at \doxyref{Building\+Manager}{p.}{class_building_manager} \doxyref{Building\+Manager}{p.}{class_building_manager} this component searches for connected Node, using \doxyref{Path\+Finding\+Node.\+On\+Placement}{p.}{class_path_finding_node_ae7b55fb42208c1c04ab17143a04791d3} in adjacent tiles. \doxyref{Path\+Finding\+Node.\+On\+Destroy}{p.}{class_path_finding_node_a15c03a7649984db46ecbeceeaca2cd4e} handles the cleanup after a street is destroyed. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_path_finding_node_a2fdc182d6a2bc26e835d3169dd20f2e3}} 
+\index{PathFindingNode@{PathFindingNode}!AdjacentNodes@{AdjacentNodes}}
+\index{AdjacentNodes@{AdjacentNodes}!PathFindingNode@{PathFindingNode}}
+\doxysubsubsection{AdjacentNodes()}
+{\footnotesize\ttfamily virtual \textbf{ Path\+Finding\+Node} Path\+Finding\+Node.\+Adjacent\+Nodes (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \textbf{ Street} \doxyref{}{p.}{class_street_a030d73f1099a5af2325788b3fb8c3d8a}, and \textbf{ Rail} \doxyref{}{p.}{class_rail_ab07366c03ecd088edce8c760a98c90ae}.
+
+\mbox{\label{class_path_finding_node_a34f158c6817364ce216347fa9928e7d9}} 
+\index{PathFindingNode@{PathFindingNode}!GetTraversalVectors@{GetTraversalVectors}}
+\index{GetTraversalVectors@{GetTraversalVectors}!PathFindingNode@{PathFindingNode}}
+\doxysubsubsection{GetTraversalVectors()}
+{\footnotesize\ttfamily abstract \textbf{ Way\+Point} Path\+Finding\+Node.\+Get\+Traversal\+Vectors (\begin{DoxyParamCaption}\item[{int}]{from\+Direction,  }\item[{int}]{to\+Direction }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \textbf{ Path\+Finding\+Target} \doxyref{}{p.}{class_path_finding_target_a8d17eb9180b956b8edd8ec678efd6940}, \textbf{ Street} \doxyref{}{p.}{class_street_abff000dfae0e1343845bb9db9825df9e}, and \textbf{ Rail} \doxyref{}{p.}{class_rail_aef2809c5df7fc5016a013ebcfcd8cd5d}.
+
+\mbox{\label{class_path_finding_node_aa37be9ec19a09e8a8b5cc1f0b05461cd}} 
+\index{PathFindingNode@{PathFindingNode}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!PathFindingNode@{PathFindingNode}}
+\doxysubsubsection{Initialize()}
+{\footnotesize\ttfamily override void Path\+Finding\+Node.\+Initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Implements \textbf{ Simple\+Map\+Placeable} \doxyref{}{p.}{class_simple_map_placeable_a7b628330453d8ee58f6fadfd9d43dd17}.
+
+
+
+Reimplemented in \textbf{ Path\+Finding\+Target} \doxyref{}{p.}{class_path_finding_target_a830c8540986ea2a2e8793a85b44d5315}, \textbf{ City\+Main\+Building} \doxyref{}{p.}{class_city_main_building_a09269aaec8594d042dd3c27b3c669188}, \textbf{ Abstract\+Storage\+Container} \doxyref{}{p.}{class_abstract_storage_container_a855a38a9b5b2002b3c3a9bc9b7e5e764}, and \textbf{ Warehouse} \doxyref{}{p.}{class_warehouse_ace666758ef6ae66b4a73e41744ef9856}.
+
+\mbox{\label{class_path_finding_node_a788e5b739623be4e0781d49270bf5f9b}} 
+\index{PathFindingNode@{PathFindingNode}!IsNode@{IsNode}}
+\index{IsNode@{IsNode}!PathFindingNode@{PathFindingNode}}
+\doxysubsubsection{IsNode()}
+{\footnotesize\ttfamily abstract bool Path\+Finding\+Node.\+Is\+Node (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Implemented in \textbf{ Path\+Finding\+Target} \doxyref{}{p.}{class_path_finding_target_a3e2cf5029c4deae199d81dd187c20b1f}, and \textbf{ Path\+Finding\+Connector} \doxyref{}{p.}{class_path_finding_connector_a15a84fff8e02c244b3df22b063ee767c}.
+
+\mbox{\label{class_path_finding_node_a915ada466ed79a82378b3ef3dd90bdf9}} 
+\index{PathFindingNode@{PathFindingNode}!IsTraversable@{IsTraversable}}
+\index{IsTraversable@{IsTraversable}!PathFindingNode@{PathFindingNode}}
+\doxysubsubsection{IsTraversable()}
+{\footnotesize\ttfamily abstract bool Path\+Finding\+Node.\+Is\+Traversable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implements \textbf{ I\+Path\+Finding\+Node} \doxyref{}{p.}{interface_i_path_finding_node_a5853839c8be013132beae63314a7bde6}.
+
+
+
+Implemented in \textbf{ Path\+Finding\+Target} \doxyref{}{p.}{class_path_finding_target_a017155003b289e899dc766a4a10f3066}, and \textbf{ Path\+Finding\+Connector} \doxyref{}{p.}{class_path_finding_connector_a1d3085fd3e0663473e29e8bb421e00c3}.
+
+\mbox{\label{class_path_finding_node_a15c03a7649984db46ecbeceeaca2cd4e}} 
+\index{PathFindingNode@{PathFindingNode}!OnDestroy@{OnDestroy}}
+\index{OnDestroy@{OnDestroy}!PathFindingNode@{PathFindingNode}}
+\doxysubsubsection{OnDestroy()}
+{\footnotesize\ttfamily void Path\+Finding\+Node.\+On\+Destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Cleans up on this object after it has been destroyed 
+
+\mbox{\label{class_path_finding_node_a2560afae82d186003b5e595f12f2772e}} 
+\index{PathFindingNode@{PathFindingNode}!OnDrawGizmos@{OnDrawGizmos}}
+\index{OnDrawGizmos@{OnDrawGizmos}!PathFindingNode@{PathFindingNode}}
+\doxysubsubsection{OnDrawGizmos()}
+{\footnotesize\ttfamily void Path\+Finding\+Node.\+On\+Draw\+Gizmos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\label{class_path_finding_node_ae7b55fb42208c1c04ab17143a04791d3}} 
+\index{PathFindingNode@{PathFindingNode}!OnPlacement@{OnPlacement}}
+\index{OnPlacement@{OnPlacement}!PathFindingNode@{PathFindingNode}}
+\doxysubsubsection{OnPlacement()}
+{\footnotesize\ttfamily override void Path\+Finding\+Node.\+On\+Placement (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Searches for neighbor streets after being placed on the map 
+
+
+
+Reimplemented from \textbf{ Simple\+Map\+Placeable} \doxyref{}{p.}{class_simple_map_placeable_ab2b18235880776edd2bf891587bc681f}.
+
+
+
+Reimplemented in \textbf{ Path\+Finding\+Target} \doxyref{}{p.}{class_path_finding_target_a25f87482daccdaecf00cf8f68c25c868}, and \textbf{ Airport} \doxyref{}{p.}{class_airport_a02a400ab05a07ce3749fafd7371fc12e}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\label{class_path_finding_node_a3a9806f30e152e6c052ac1272e1a2dcb}} 
+\index{PathFindingNode@{PathFindingNode}!Down@{Down}}
+\index{Down@{Down}!PathFindingNode@{PathFindingNode}}
+\doxysubsubsection{Down}
+{\footnotesize\ttfamily const int Path\+Finding\+Node.\+Down = 2\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\label{class_path_finding_node_a0670c41d1ba45231739ed64db0c3fd2a}} 
+\index{PathFindingNode@{PathFindingNode}!Left@{Left}}
+\index{Left@{Left}!PathFindingNode@{PathFindingNode}}
+\doxysubsubsection{Left}
+{\footnotesize\ttfamily const int Path\+Finding\+Node.\+Left = 3\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\label{class_path_finding_node_ac8530387d426e15df44746f8cb1bd14c}} 
+\index{PathFindingNode@{PathFindingNode}!Right@{Right}}
+\index{Right@{Right}!PathFindingNode@{PathFindingNode}}
+\doxysubsubsection{Right}
+{\footnotesize\ttfamily const int Path\+Finding\+Node.\+Right = 1\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\label{class_path_finding_node_ad79609a0bc4267bef7c8200ba31ab24e}} 
+\index{PathFindingNode@{PathFindingNode}!Up@{Up}}
+\index{Up@{Up}!PathFindingNode@{PathFindingNode}}
+\doxysubsubsection{Up}
+{\footnotesize\ttfamily const int Path\+Finding\+Node.\+Up = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\label{class_path_finding_node_ab3a57f3228ec85111702adb4f43d6c3b}} 
+\index{PathFindingNode@{PathFindingNode}!NeighborNodes@{NeighborNodes}}
+\index{NeighborNodes@{NeighborNodes}!PathFindingNode@{PathFindingNode}}
+\doxysubsubsection{NeighborNodes}
+{\footnotesize\ttfamily \textbf{ Path\+Finding\+Node} [$\,$] Path\+Finding\+Node.\+Neighbor\+Nodes\hspace{0.3cm}{\ttfamily [get]}}
+
+\mbox{\label{class_path_finding_node_a0bca1a33c1bd30d198e0d82c4bf77fca}} 
+\index{PathFindingNode@{PathFindingNode}!TotalNodeCount@{TotalNodeCount}}
+\index{TotalNodeCount@{TotalNodeCount}!PathFindingNode@{PathFindingNode}}
+\doxysubsubsection{TotalNodeCount}
+{\footnotesize\ttfamily int Path\+Finding\+Node.\+Total\+Node\+Count\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}}
+
+\mbox{\label{class_path_finding_node_acca90990631deeea8560e2774e3ae6e2}} 
+\index{PathFindingNode@{PathFindingNode}!TraversalOffset@{TraversalOffset}}
+\index{TraversalOffset@{TraversalOffset}!PathFindingNode@{PathFindingNode}}
+\doxysubsubsection{TraversalOffset}
+{\footnotesize\ttfamily virtual \textbf{ Vector3} Path\+Finding\+Node.\+Traversal\+Offset\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}, {\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Poly\+Tycoon/\+Scripts/\+Model/\+Pathfinding/\textbf{ Path\+Finding\+Node.\+cs}\end{DoxyCompactItemize}

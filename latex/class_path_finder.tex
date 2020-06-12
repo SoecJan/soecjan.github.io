@@ -1,0 +1,66 @@
+\doxysection{Path\+Finder Class Reference}
+\label{class_path_finder}\index{PathFinder@{PathFinder}}
+
+
+Wraps the Pathfinding process for multiple \doxyref{Abstract\+Path\+Finding\+Algorithm}{p.}{class_abstract_path_finding_algorithm} instances. Determines the \doxyref{Path\+Type}{p.}{_transport_vehicle_data_8cs_ae093c9a96eda0463cdd2501ba83f10c3} and therefore this used \doxyref{Abstract\+Path\+Finding\+Algorithm}{p.}{class_abstract_path_finding_algorithm} of a given \doxyref{Transport\+Vehicle\+Data}{p.}{class_transport_vehicle_data} for Pathfinding.  
+
+
+Inheritance diagram for Path\+Finder\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_path_finder}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Path\+Finder} (\textbf{ I\+Terrain\+Generator} terrain\+Generator)
+\item 
+List$<$ \textbf{ Transport\+Route\+Element} $>$ \textbf{ Find\+Path} (\textbf{ Transport\+Vehicle\+Data} transport\+Vehicle\+Data, List$<$ \textbf{ Transport\+Route\+Element} $>$ transport\+Route\+Elements)
+\begin{DoxyCompactList}\small\item\em Finds Paths for the given \doxyref{Transport\+Route\+Element}{p.}{class_transport_route_element} based on the given \doxyref{Transport\+Vehicle\+Data}{p.}{class_transport_vehicle_data} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Wraps the Pathfinding process for multiple \doxyref{Abstract\+Path\+Finding\+Algorithm}{p.}{class_abstract_path_finding_algorithm} instances. Determines the \doxyref{Path\+Type}{p.}{_transport_vehicle_data_8cs_ae093c9a96eda0463cdd2501ba83f10c3} and therefore this used \doxyref{Abstract\+Path\+Finding\+Algorithm}{p.}{class_abstract_path_finding_algorithm} of a given \doxyref{Transport\+Vehicle\+Data}{p.}{class_transport_vehicle_data} for Pathfinding. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\label{class_path_finder_a751b02aab1904823883646458dfebaeb}} 
+\index{PathFinder@{PathFinder}!PathFinder@{PathFinder}}
+\index{PathFinder@{PathFinder}!PathFinder@{PathFinder}}
+\doxysubsubsection{PathFinder()}
+{\footnotesize\ttfamily Path\+Finder.\+Path\+Finder (\begin{DoxyParamCaption}\item[{\textbf{ I\+Terrain\+Generator}}]{terrain\+Generator }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_path_finder_adc56d536c349d1049880e8f988e16561}} 
+\index{PathFinder@{PathFinder}!FindPath@{FindPath}}
+\index{FindPath@{FindPath}!PathFinder@{PathFinder}}
+\doxysubsubsection{FindPath()}
+{\footnotesize\ttfamily List$<$\textbf{ Transport\+Route\+Element}$>$ Path\+Finder.\+Find\+Path (\begin{DoxyParamCaption}\item[{\textbf{ Transport\+Vehicle\+Data}}]{transport\+Vehicle\+Data,  }\item[{List$<$ \textbf{ Transport\+Route\+Element} $>$}]{transport\+Route\+Elements }\end{DoxyParamCaption})}
+
+
+
+Finds Paths for the given \doxyref{Transport\+Route\+Element}{p.}{class_transport_route_element} based on the given \doxyref{Transport\+Vehicle\+Data}{p.}{class_transport_vehicle_data} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em transport\+Vehicle\+Data} & The vehicle that is going to use the path\\
+\hline
+{\em transport\+Route\+Elements} & The route that needs to be calculated\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The populated List of Transport\+Route\+Elements
+\end{DoxyReturn}
+
+
+Implements \textbf{ I\+Path\+Finder} \doxyref{}{p.}{interface_i_path_finder_af5a3e811a2d2f32a919388b357059e3c}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Poly\+Tycoon/\+Scripts/\+Model/\+Pathfinding/\textbf{ Path\+Finder.\+cs}\end{DoxyCompactItemize}

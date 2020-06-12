@@ -1,0 +1,194 @@
+\doxysection{Simple\+Map\+Placeable Class Reference}
+\label{class_simple_map_placeable}\index{SimpleMapPlaceable@{SimpleMapPlaceable}}
+
+
+All objects that can be placed on the map need to have this or a derivative of this component. Placement on the grid is then processed by \doxyref{Placement\+Controller}{p.}{class_placement_controller} and registered by \doxyref{Building\+Manager}{p.}{class_building_manager}.  
+
+
+Inheritance diagram for Simple\+Map\+Placeable\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.722891cm]{class_simple_map_placeable}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \textbf{ Awake} ()
+\begin{DoxyCompactList}\small\item\em Gets the static reference to \doxyref{Building\+Manager}{p.}{class_building_manager} instance \end{DoxyCompactList}\item 
+virtual float \textbf{ Get\+Height} ()
+\begin{DoxyCompactList}\small\item\em \begin{DoxyReturn}{Returns}
+The height of the placed object.
+\end{DoxyReturn}
+\end{DoxyCompactList}\item 
+virtual void \textbf{ On\+Placement} ()
+\begin{DoxyCompactList}\small\item\em Is called by \doxyref{Building\+Manager}{p.}{class_building_manager} after successful placement of this \doxyref{Map\+Placeable}{p.}{class_map_placeable}. \end{DoxyCompactList}\item 
+override void \textbf{ Rotate} (\textbf{ Vector3} axis, float rotation\+Amount)
+\begin{DoxyCompactList}\small\item\em Rotates the \doxyref{Map\+Placeable}{p.}{class_map_placeable} by rotation\+Amount degrees. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+abstract void \textbf{ Initialize} ()
+\item 
+void \textbf{ Rotate\+Used\+Coords} (float rotation\+Amount)
+\begin{DoxyCompactList}\small\item\em Rotates the Used\+Coordinates to align to the current Transform rotation. Called before Placement by \doxyref{Placement\+Controller}{p.}{class_placement_controller}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \textbf{ \+\_\+is\+Clickable}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Vector3}? \textbf{ Threadsafe\+Position}\hspace{0.3cm}{\ttfamily  [get]}
+\item 
+List$<$ \textbf{ Needed\+Space} $>$ \textbf{ Used\+Coordinates}\hspace{0.3cm}{\ttfamily  [get, set]}
+\item 
+bool \textbf{ Is\+Placed}\hspace{0.3cm}{\ttfamily  [get]}
+\item 
+static Action$<$ \textbf{ Simple\+Map\+Placeable} $>$ \textbf{ On\+Click\+Action}\hspace{0.3cm}{\ttfamily  [get, set]}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+All objects that can be placed on the map need to have this or a derivative of this component. Placement on the grid is then processed by \doxyref{Placement\+Controller}{p.}{class_placement_controller} and registered by \doxyref{Building\+Manager}{p.}{class_building_manager}. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{class_simple_map_placeable_a15e80ebc1db02ca9e324cd2d9d4a90e1}} 
+\index{SimpleMapPlaceable@{SimpleMapPlaceable}!Awake@{Awake}}
+\index{Awake@{Awake}!SimpleMapPlaceable@{SimpleMapPlaceable}}
+\doxysubsubsection{Awake()}
+{\footnotesize\ttfamily override void Simple\+Map\+Placeable.\+Awake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Gets the static reference to \doxyref{Building\+Manager}{p.}{class_building_manager} instance 
+
+
+
+Reimplemented from \textbf{ Map\+Placeable} \doxyref{}{p.}{class_map_placeable_afdcde3cba6defd167aec535dfb4325aa}.
+
+\mbox{\label{class_simple_map_placeable_ae6d8c244688e52c3a3a9f11d7b781d83}} 
+\index{SimpleMapPlaceable@{SimpleMapPlaceable}!GetHeight@{GetHeight}}
+\index{GetHeight@{GetHeight}!SimpleMapPlaceable@{SimpleMapPlaceable}}
+\doxysubsubsection{GetHeight()}
+{\footnotesize\ttfamily virtual float Simple\+Map\+Placeable.\+Get\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\begin{DoxyReturn}{Returns}
+The height of the placed object.
+\end{DoxyReturn}
+
+
+
+
+Implements \textbf{ I\+Simple\+Map\+Placeable} \doxyref{}{p.}{interface_i_simple_map_placeable_ab0633206eb4d2d56023fa88f25d620aa}.
+
+
+
+Reimplemented in \textbf{ Procedural\+City\+Building} \doxyref{}{p.}{class_procedural_city_building_ac4dd7086167440661d7d00eadec8f7c7}.
+
+\mbox{\label{class_simple_map_placeable_a7b628330453d8ee58f6fadfd9d43dd17}} 
+\index{SimpleMapPlaceable@{SimpleMapPlaceable}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!SimpleMapPlaceable@{SimpleMapPlaceable}}
+\doxysubsubsection{Initialize()}
+{\footnotesize\ttfamily abstract void Simple\+Map\+Placeable.\+Initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Implemented in \textbf{ Path\+Finding\+Node} \doxyref{}{p.}{class_path_finding_node_aa37be9ec19a09e8a8b5cc1f0b05461cd}, \textbf{ City\+Building} \doxyref{}{p.}{class_city_building_afab56e0294f583917bae258e18c5ee83}, \textbf{ Path\+Finding\+Target} \doxyref{}{p.}{class_path_finding_target_a830c8540986ea2a2e8793a85b44d5315}, \textbf{ City\+Main\+Building} \doxyref{}{p.}{class_city_main_building_a09269aaec8594d042dd3c27b3c669188}, \textbf{ Path\+Finding\+Connector} \doxyref{}{p.}{class_path_finding_connector_a71b420ffd02405d8fa7fff2bdc538cc1}, \textbf{ Abstract\+Storage\+Container} \doxyref{}{p.}{class_abstract_storage_container_a855a38a9b5b2002b3c3a9bc9b7e5e764}, \textbf{ Procedural\+City\+Building} \doxyref{}{p.}{class_procedural_city_building_a0fa41c55e1c7551f0ceffb72e21f1133}, \textbf{ Warehouse} \doxyref{}{p.}{class_warehouse_ace666758ef6ae66b4a73e41744ef9856}, and \textbf{ Tree\+Behaviour} \doxyref{}{p.}{class_tree_behaviour_abb90ed4377f415245629b4b8cae579db}.
+
+\mbox{\label{class_simple_map_placeable_ab2b18235880776edd2bf891587bc681f}} 
+\index{SimpleMapPlaceable@{SimpleMapPlaceable}!OnPlacement@{OnPlacement}}
+\index{OnPlacement@{OnPlacement}!SimpleMapPlaceable@{SimpleMapPlaceable}}
+\doxysubsubsection{OnPlacement()}
+{\footnotesize\ttfamily virtual void Simple\+Map\+Placeable.\+On\+Placement (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Is called by \doxyref{Building\+Manager}{p.}{class_building_manager} after successful placement of this \doxyref{Map\+Placeable}{p.}{class_map_placeable}. 
+
+
+
+Implements \textbf{ I\+Simple\+Map\+Placeable} \doxyref{}{p.}{interface_i_simple_map_placeable_a54176452fbfe3c2b36742f790329fb60}.
+
+
+
+Reimplemented in \textbf{ Path\+Finding\+Node} \doxyref{}{p.}{class_path_finding_node_ae7b55fb42208c1c04ab17143a04791d3}, \textbf{ Path\+Finding\+Target} \doxyref{}{p.}{class_path_finding_target_a25f87482daccdaecf00cf8f68c25c868}, \textbf{ Path\+Finding\+Connector} \doxyref{}{p.}{class_path_finding_connector_affd676752f299efe7764f6427f847668}, and \textbf{ Airport} \doxyref{}{p.}{class_airport_a02a400ab05a07ce3749fafd7371fc12e}.
+
+\mbox{\label{class_simple_map_placeable_a1a4a04226e7b198414e75b0f7667ff7e}} 
+\index{SimpleMapPlaceable@{SimpleMapPlaceable}!Rotate@{Rotate}}
+\index{Rotate@{Rotate}!SimpleMapPlaceable@{SimpleMapPlaceable}}
+\doxysubsubsection{Rotate()}
+{\footnotesize\ttfamily override void Simple\+Map\+Placeable.\+Rotate (\begin{DoxyParamCaption}\item[{\textbf{ Vector3}}]{axis,  }\item[{float}]{rotation\+Amount }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Rotates the \doxyref{Map\+Placeable}{p.}{class_map_placeable} by rotation\+Amount degrees. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em axis} & The axis of rotation\\
+\hline
+{\em rotation\+Amount} & The amount of rotation in degrees. 90f = 90° of rotation.\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \textbf{ Map\+Placeable} \doxyref{}{p.}{class_map_placeable_aa0ba6bf637f5e4f58ae17d9d6b833b6f}.
+
+\mbox{\label{class_simple_map_placeable_ad61d9c66a7c898e4591a8aec71454036}} 
+\index{SimpleMapPlaceable@{SimpleMapPlaceable}!RotateUsedCoords@{RotateUsedCoords}}
+\index{RotateUsedCoords@{RotateUsedCoords}!SimpleMapPlaceable@{SimpleMapPlaceable}}
+\doxysubsubsection{RotateUsedCoords()}
+{\footnotesize\ttfamily void Simple\+Map\+Placeable.\+Rotate\+Used\+Coords (\begin{DoxyParamCaption}\item[{float}]{rotation\+Amount }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Rotates the Used\+Coordinates to align to the current Transform rotation. Called before Placement by \doxyref{Placement\+Controller}{p.}{class_placement_controller}. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\label{class_simple_map_placeable_af656919106c5ae39eb370d4593ca66a1}} 
+\index{SimpleMapPlaceable@{SimpleMapPlaceable}!\_isClickable@{\_isClickable}}
+\index{\_isClickable@{\_isClickable}!SimpleMapPlaceable@{SimpleMapPlaceable}}
+\doxysubsubsection{\_isClickable}
+{\footnotesize\ttfamily bool Simple\+Map\+Placeable.\+\_\+is\+Clickable\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\label{class_simple_map_placeable_aa812b1e903d0e3076c88b1e409daa306}} 
+\index{SimpleMapPlaceable@{SimpleMapPlaceable}!IsPlaced@{IsPlaced}}
+\index{IsPlaced@{IsPlaced}!SimpleMapPlaceable@{SimpleMapPlaceable}}
+\doxysubsubsection{IsPlaced}
+{\footnotesize\ttfamily bool Simple\+Map\+Placeable.\+Is\+Placed\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [protected]}}
+
+\mbox{\label{class_simple_map_placeable_a2672e6582f10a899326d2763febee8f8}} 
+\index{SimpleMapPlaceable@{SimpleMapPlaceable}!OnClickAction@{OnClickAction}}
+\index{OnClickAction@{OnClickAction}!SimpleMapPlaceable@{SimpleMapPlaceable}}
+\doxysubsubsection{OnClickAction}
+{\footnotesize\ttfamily Action$<$\textbf{ Simple\+Map\+Placeable}$>$ Simple\+Map\+Placeable.\+On\+Click\+Action\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\label{class_simple_map_placeable_a0095abc3e92c7e4c1123553a07bf32fc}} 
+\index{SimpleMapPlaceable@{SimpleMapPlaceable}!ThreadsafePosition@{ThreadsafePosition}}
+\index{ThreadsafePosition@{ThreadsafePosition}!SimpleMapPlaceable@{SimpleMapPlaceable}}
+\doxysubsubsection{ThreadsafePosition}
+{\footnotesize\ttfamily \textbf{ Vector3}? Simple\+Map\+Placeable.\+Threadsafe\+Position\hspace{0.3cm}{\ttfamily [get]}}
+
+\mbox{\label{class_simple_map_placeable_ab7e36839b84828a5091acdb36ea58b0d}} 
+\index{SimpleMapPlaceable@{SimpleMapPlaceable}!UsedCoordinates@{UsedCoordinates}}
+\index{UsedCoordinates@{UsedCoordinates}!SimpleMapPlaceable@{SimpleMapPlaceable}}
+\doxysubsubsection{UsedCoordinates}
+{\footnotesize\ttfamily List$<$\textbf{ Needed\+Space}$>$ Simple\+Map\+Placeable.\+Used\+Coordinates\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Poly\+Tycoon/\+Scripts/\+Model/\+Placement/\textbf{ Simple\+Map\+Placeable.\+cs}\end{DoxyCompactItemize}

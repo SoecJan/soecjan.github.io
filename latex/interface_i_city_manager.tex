@@ -1,0 +1,77 @@
+\doxysection{I\+City\+Manager Interface Reference}
+\label{interface_i_city_manager}\index{ICityManager@{ICityManager}}
+
+
+The city manager holds a reference to all cities.  
+
+
+Inheritance diagram for I\+City\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_i_city_manager}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ On\+Placement\+Position\+Found} (object threadsafe\+Placeable)
+\item 
+\textbf{ City\+Placeable} \textbf{ Get\+Random\+City\+Prefab} ()
+\item 
+\textbf{ City\+Placeable} \textbf{ Get\+City} (string city\+Name)
+\begin{DoxyCompactList}\small\item\em This function returns the \doxyref{City\+Placeable}{p.}{class_city_placeable} reference to a given city name string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The city manager holds a reference to all cities. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{interface_i_city_manager_ae3d4049b6618eb3a4065308b5b40279e}} 
+\index{ICityManager@{ICityManager}!GetCity@{GetCity}}
+\index{GetCity@{GetCity}!ICityManager@{ICityManager}}
+\doxysubsubsection{GetCity()}
+{\footnotesize\ttfamily \textbf{ City\+Placeable} I\+City\+Manager.\+Get\+City (\begin{DoxyParamCaption}\item[{string}]{city\+Name }\end{DoxyParamCaption})}
+
+
+
+This function returns the \doxyref{City\+Placeable}{p.}{class_city_placeable} reference to a given city name string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em city\+Name} & The name of the \doxyref{City\+Placeable}{p.}{class_city_placeable} that needs to be returned.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The \doxyref{City\+Placeable}{p.}{class_city_placeable} instance associated with the given name
+\end{DoxyReturn}
+
+
+Implemented in \textbf{ City\+Manager} \doxyref{}{p.}{class_city_manager_a17d50efe89310e332f8f05fdd1b6f019}.
+
+\mbox{\label{interface_i_city_manager_a126e109f745c7a4ae400da4f874eca1a}} 
+\index{ICityManager@{ICityManager}!GetRandomCityPrefab@{GetRandomCityPrefab}}
+\index{GetRandomCityPrefab@{GetRandomCityPrefab}!ICityManager@{ICityManager}}
+\doxysubsubsection{GetRandomCityPrefab()}
+{\footnotesize\ttfamily \textbf{ City\+Placeable} I\+City\+Manager.\+Get\+Random\+City\+Prefab (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Implemented in \textbf{ City\+Manager} \doxyref{}{p.}{class_city_manager_af7c6e1110a7305ab70f08d22288337a2}.
+
+\mbox{\label{interface_i_city_manager_ab2246c347924894e03724beeb87c5ef8}} 
+\index{ICityManager@{ICityManager}!OnPlacementPositionFound@{OnPlacementPositionFound}}
+\index{OnPlacementPositionFound@{OnPlacementPositionFound}!ICityManager@{ICityManager}}
+\doxysubsubsection{OnPlacementPositionFound()}
+{\footnotesize\ttfamily void I\+City\+Manager.\+On\+Placement\+Position\+Found (\begin{DoxyParamCaption}\item[{object}]{threadsafe\+Placeable }\end{DoxyParamCaption})}
+
+
+
+Implemented in \textbf{ City\+Manager} \doxyref{}{p.}{class_city_manager_a268b76e6c58dad1f19403b676596aaa6}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Poly\+Tycoon/\+Scripts/\+Controller/\textbf{ I\+City\+Manager.\+cs}\end{DoxyCompactItemize}

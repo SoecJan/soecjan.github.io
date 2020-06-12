@@ -1,0 +1,97 @@
+\doxysection{I\+Path\+Node Interface Reference}
+\label{interface_i_path_node}\index{IPathNode@{IPathNode}}
+
+
+This interface defines functionality for optimizing the use of the Pathfinder. Instead of calculating new paths on every request this interface enables existing paths to be saved and reused.  
+
+
+Inheritance diagram for I\+Path\+Node\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.373494cm]{interface_i_path_node}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Path} \textbf{ Path\+To} (\textbf{ Path\+Finding\+Node} target\+Node)
+\begin{DoxyCompactList}\small\item\em This Method enables other classes to receive the \doxyref{Path}{p.}{class_path} from one node to another target node. \end{DoxyCompactList}\item 
+void \textbf{ Add\+Path} (\textbf{ Path\+Finding\+Node} target\+Node, \textbf{ Path} path)
+\begin{DoxyCompactList}\small\item\em This Method can be used to add a \doxyref{Path}{p.}{class_path} from the current instance to a target Node. \end{DoxyCompactList}\item 
+void \textbf{ Remove\+Path} (\textbf{ Path\+Finding\+Node} target\+Node)
+\begin{DoxyCompactList}\small\item\em This Method can be used to remove a \doxyref{Path}{p.}{class_path} from the current instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This interface defines functionality for optimizing the use of the Pathfinder. Instead of calculating new paths on every request this interface enables existing paths to be saved and reused. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\label{interface_i_path_node_ae00386753a922fbeb3e83ee7bcf14ee7}} 
+\index{IPathNode@{IPathNode}!AddPath@{AddPath}}
+\index{AddPath@{AddPath}!IPathNode@{IPathNode}}
+\doxysubsubsection{AddPath()}
+{\footnotesize\ttfamily void I\+Path\+Node.\+Add\+Path (\begin{DoxyParamCaption}\item[{\textbf{ Path\+Finding\+Node}}]{target\+Node,  }\item[{\textbf{ Path}}]{path }\end{DoxyParamCaption})}
+
+
+
+This Method can be used to add a \doxyref{Path}{p.}{class_path} from the current instance to a target Node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target\+Node} & The target node that can be accessed by this path\\
+\hline
+{\em path} & The path that leads to the target node\\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \textbf{ City\+Placeable} \doxyref{}{p.}{class_city_placeable_a135222df2de930d3b2ae8b7a8ae6b479}, and \textbf{ Path\+Finding\+Target} \doxyref{}{p.}{class_path_finding_target_affe3a961ed6fbbb9464c678737ac5b20}.
+
+\mbox{\label{interface_i_path_node_afd570a9f66a0bfc461574e68f3ec9bde}} 
+\index{IPathNode@{IPathNode}!PathTo@{PathTo}}
+\index{PathTo@{PathTo}!IPathNode@{IPathNode}}
+\doxysubsubsection{PathTo()}
+{\footnotesize\ttfamily \textbf{ Path} I\+Path\+Node.\+Path\+To (\begin{DoxyParamCaption}\item[{\textbf{ Path\+Finding\+Node}}]{target\+Node }\end{DoxyParamCaption})}
+
+
+
+This Method enables other classes to receive the \doxyref{Path}{p.}{class_path} from one node to another target node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target\+Node} & The Node that is supposed to be reached\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A path from the \doxyref{I\+Path\+Node}{p.}{interface_i_path_node} instance to the target\+Node
+\end{DoxyReturn}
+
+
+Implemented in \textbf{ City\+Placeable} \doxyref{}{p.}{class_city_placeable_abb2d66d49721e4a02ed3d0e15d3a9dfe}, and \textbf{ Path\+Finding\+Target} \doxyref{}{p.}{class_path_finding_target_ac394b50f7bebacd94957adcac10b1344}.
+
+\mbox{\label{interface_i_path_node_a76f3c58c33d0df3a36f9c15f94c053d8}} 
+\index{IPathNode@{IPathNode}!RemovePath@{RemovePath}}
+\index{RemovePath@{RemovePath}!IPathNode@{IPathNode}}
+\doxysubsubsection{RemovePath()}
+{\footnotesize\ttfamily void I\+Path\+Node.\+Remove\+Path (\begin{DoxyParamCaption}\item[{\textbf{ Path\+Finding\+Node}}]{target\+Node }\end{DoxyParamCaption})}
+
+
+
+This Method can be used to remove a \doxyref{Path}{p.}{class_path} from the current instance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target\+Node} & The target Node this instance should no longer hold a path to\\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \textbf{ City\+Placeable} \doxyref{}{p.}{class_city_placeable_a022ec2efbb716e301508317f89a01163}, and \textbf{ Path\+Finding\+Target} \doxyref{}{p.}{class_path_finding_target_a1dc12de65b40cab1a19789daa5c047c7}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Poly\+Tycoon/\+Scripts/\+Model/\+Pathfinding/\textbf{ Path\+Finding\+Target.\+cs}\end{DoxyCompactItemize}
