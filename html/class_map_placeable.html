@@ -87,19 +87,19 @@ Inheritance diagram for MapPlaceable:</div>
 <area href="class_simple_map_placeable.html" title="All objects that can be placed on the map need to have this or a derivative of this component...." alt="SimpleMapPlaceable" shape="rect" coords="504,112,662,136"/>
 <area href="class_city_placeable.html" title="Holds a reference to all buildings contained in this cityPlaceable. Represents a wrapper for the city..." alt="CityPlaceable" shape="rect" coords="0,168,158,192"/>
 <area href="class_city_building.html" title="Class of any Building that can be registered at a CityPlaceable object." alt="CityBuilding" shape="rect" coords="168,168,326,192"/>
-<area href="class_path_finding_node.html" title="All objects that are supposed to be reached by a vehicle need to have this component...." alt="PathFindingNode" shape="rect" coords="420,168,578,192"/>
-<area href="class_procedural_city_building.html" alt="ProceduralCityBuilding" shape="rect" coords="588,168,746,192"/>
-<area href="class_tree_behaviour.html" alt="TreeBehaviour" shape="rect" coords="756,168,914,192"/>
-<area href="class_path_finding_connector.html" title="Pathfinding Connectors create a network. Using this network the PathFinder can find a Path from one P..." alt="PathFindingConnector" shape="rect" coords="252,224,410,248"/>
-<area href="class_path_finding_target.html" title="An endpoint. The Pathfinding algorithm finds Paths from and to PathFindingTargets using PathFindingCo..." alt="PathFindingTarget" shape="rect" coords="588,224,746,248"/>
-<area href="class_rail.html" title="Is the foundation for rail networks." alt="Rail" shape="rect" coords="168,280,326,304"/>
-<area href="class_street.html" title="Is the foundation for street networks" alt="Street" shape="rect" coords="336,280,494,304"/>
-<area href="class_abstract_storage_container.html" title="A StorageContainer can take any kind of ProductData and store it. The stored products can be picked u..." alt="AbstractStorageContainer" shape="rect" coords="504,280,662,304"/>
-<area href="class_city_main_building.html" title="This class contains the definition for a main building inside the city." alt="CityMainBuilding" shape="rect" coords="672,280,830,304"/>
-<area href="class_airport.html" alt="Airport" shape="rect" coords="252,336,410,360"/>
-<area href="class_harbor.html" alt="Harbor" shape="rect" coords="420,336,578,360"/>
-<area href="class_trainstation.html" alt="Trainstation" shape="rect" coords="588,336,746,360"/>
-<area href="class_warehouse.html" alt="Warehouse" shape="rect" coords="756,336,914,360"/>
+<area href="class_path_finding_node.html" title="All objects that are supposed to be reached by a vehicle need to have this component...." alt="PathFindingNode" shape="rect" coords="504,168,662,192"/>
+<area href="class_tree_behaviour.html" alt="TreeBehaviour" shape="rect" coords="672,168,830,192"/>
+<area href="class_procedural_city_building.html" alt="ProceduralCityBuilding" shape="rect" coords="168,224,326,248"/>
+<area href="class_path_finding_connector.html" title="Pathfinding Connectors create a network. Using this network the PathFinder can find a Path from one P..." alt="PathFindingConnector" shape="rect" coords="336,224,494,248"/>
+<area href="class_path_finding_target.html" title="An endpoint. The Pathfinding algorithm finds Paths from and to PathFindingTargets using PathFindingCo..." alt="PathFindingTarget" shape="rect" coords="672,224,830,248"/>
+<area href="class_rail.html" title="Is the foundation for rail networks." alt="Rail" shape="rect" coords="252,280,410,304"/>
+<area href="class_street.html" title="Is the foundation for street networks" alt="Street" shape="rect" coords="420,280,578,304"/>
+<area href="class_abstract_storage_container.html" title="A StorageContainer can take any kind of ProductData and store it. The stored products can be picked u..." alt="AbstractStorageContainer" shape="rect" coords="588,280,746,304"/>
+<area href="class_city_main_building.html" title="This class contains the definition for a main building inside the city." alt="CityMainBuilding" shape="rect" coords="756,280,914,304"/>
+<area href="class_airport.html" alt="Airport" shape="rect" coords="336,336,494,360"/>
+<area href="class_harbor.html" alt="Harbor" shape="rect" coords="504,336,662,360"/>
+<area href="class_trainstation.html" alt="Trainstation" shape="rect" coords="672,336,830,360"/>
+<area href="class_warehouse.html" alt="Warehouse" shape="rect" coords="840,336,998,360"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -117,8 +117,10 @@ Public Member Functions</h2></td></tr>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:a9f383bfc0eec1ee15a1100fec28dc7df"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map_placeable.html#a9f383bfc0eec1ee15a1100fec28dc7df">_isHighlightable</a> = true</td></tr>
 <tr class="separator:a9f383bfc0eec1ee15a1100fec28dc7df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01b1bc7d375609a28e6eae87d5c24c51"><td class="memItemLeft" align="right" valign="top">Renderer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map_placeable.html#a01b1bc7d375609a28e6eae87d5c24c51">childRenderer</a></td></tr>
-<tr class="separator:a01b1bc7d375609a28e6eae87d5c24c51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e57577b35478357e98fc03eaf4927d4"><td class="memItemLeft" align="right" valign="top">Renderer[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map_placeable.html#a5e57577b35478357e98fc03eaf4927d4">childRenderers</a></td></tr>
+<tr class="separator:a5e57577b35478357e98fc03eaf4927d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8652cd5bbc1efa4ff04d1b3aab4da2bf"><td class="memItemLeft" align="right" valign="top">MaterialPropertyBlock&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map_placeable.html#a8652cd5bbc1efa4ff04d1b3aab4da2bf">materialPropertyBlock</a></td></tr>
+<tr class="separator:a8652cd5bbc1efa4ff04d1b3aab4da2bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-attribs"></a>
 Static Protected Attributes</h2></td></tr>
@@ -131,12 +133,8 @@ Static Protected Attributes</h2></td></tr>
 Properties</h2></td></tr>
 <tr class="memitem:a3356902a726ef0a93cc60058c3470fb1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map_placeable.html#a3356902a726ef0a93cc60058c3470fb1">IsDraggable</a><code> [get, set]</code></td></tr>
 <tr class="separator:a3356902a726ef0a93cc60058c3470fb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af8f7f51219a92e922260d83ffba264d1"><td class="memItemLeft" align="right" valign="top">Material&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map_placeable.html#af8f7f51219a92e922260d83ffba264d1">RendererMaterial</a><code> [get, set]</code></td></tr>
-<tr class="separator:af8f7f51219a92e922260d83ffba264d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae2873ee6454e67237c373844dac0ed3d"><td class="memItemLeft" align="right" valign="top">bool?&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map_placeable.html#ae2873ee6454e67237c373844dac0ed3d">IsPlaceable</a><code> [set]</code></td></tr>
 <tr class="separator:ae2873ee6454e67237c373844dac0ed3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a67e2d0f316a56fd4d4317e96dc7dcf7a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_outline.html">Outline</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map_placeable.html#a67e2d0f316a56fd4d4317e96dc7dcf7a">Outline</a><code> [get]</code></td></tr>
-<tr class="separator:a67e2d0f316a56fd4d4317e96dc7dcf7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header properties_interface_i_map_placeable"><td colspan="2" onclick="javascript:toggleInherit('properties_interface_i_map_placeable')"><img src="closed.png" alt="-"/>&#160;Properties inherited from <a class="el" href="interface_i_map_placeable.html">IMapPlaceable</a></td></tr>
 <tr class="memitem:af78b4c93bcca93268dbf775902720ce7 inherit properties_interface_i_map_placeable"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_map_placeable.html#af78b4c93bcca93268dbf775902720ce7">IsDraggable</a><code> [get, set]</code></td></tr>
 <tr class="memdesc:af78b4c93bcca93268dbf775902720ce7 inherit properties_interface_i_map_placeable"><td class="mdescLeft">&#160;</td><td class="mdescRight">If the associated <a class="el" href="class_map_placeable.html" title="MapPlaceables are objects that can be placed in the game by the user.">MapPlaceable</a> can be dragged to created multiple instances in one line.  <a href="interface_i_map_placeable.html#af78b4c93bcca93268dbf775902720ce7">More...</a><br /></td></tr>
@@ -269,8 +267,8 @@ Properties</h2></td></tr>
 
 </div>
 </div>
-<a id="a01b1bc7d375609a28e6eae87d5c24c51"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a01b1bc7d375609a28e6eae87d5c24c51">&#9670;&nbsp;</a></span>childRenderer</h2>
+<a id="a5e57577b35478357e98fc03eaf4927d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e57577b35478357e98fc03eaf4927d4">&#9670;&nbsp;</a></span>childRenderers</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -279,7 +277,7 @@ Properties</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Renderer MapPlaceable.childRenderer</td>
+          <td class="memname">Renderer [] MapPlaceable.childRenderers</td>
         </tr>
       </table>
   </td>
@@ -335,6 +333,28 @@ Properties</h2></td></tr>
 
 </div>
 </div>
+<a id="a8652cd5bbc1efa4ff04d1b3aab4da2bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8652cd5bbc1efa4ff04d1b3aab4da2bf">&#9670;&nbsp;</a></span>materialPropertyBlock</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">MaterialPropertyBlock MapPlaceable.materialPropertyBlock</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Property Documentation</h2>
 <a id="a3356902a726ef0a93cc60058c3470fb1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3356902a726ef0a93cc60058c3470fb1">&#9670;&nbsp;</a></span>IsDraggable</h2>
@@ -374,50 +394,6 @@ Properties</h2></td></tr>
   </td>
   <td class="mlabels-right">
 <span class="mlabels"><span class="mlabel">set</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a67e2d0f316a56fd4d4317e96dc7dcf7a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a67e2d0f316a56fd4d4317e96dc7dcf7a">&#9670;&nbsp;</a></span>Outline</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_outline.html">Outline</a> MapPlaceable.Outline</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">get</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="af8f7f51219a92e922260d83ffba264d1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af8f7f51219a92e922260d83ffba264d1">&#9670;&nbsp;</a></span>RendererMaterial</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">Material MapPlaceable.RendererMaterial</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">

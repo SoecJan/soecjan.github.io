@@ -1,8 +1,7 @@
 var searchData=
 [
-  ['radius_1359',['Radius',['../struct_way_point.html#a0c3b12c8a141cef8f75fd18656bd124d',1,'WayPoint']]],
-  ['randompricefactor_1360',['RandomPriceFactor',['../class_product_data.html#adbb061f47ae921ae7b4fd28b3ffb9eb1',1,'ProductData']]],
-  ['renderermaterial_1361',['RendererMaterial',['../class_map_placeable.html#af8f7f51219a92e922260d83ffba264d1',1,'MapPlaceable']]],
+  ['radius_1360',['Radius',['../struct_way_point.html#a0c3b12c8a141cef8f75fd18656bd124d',1,'WayPoint']]],
+  ['randompricefactor_1361',['RandomPriceFactor',['../class_product_data.html#adbb061f47ae921ae7b4fd28b3ffb9eb1',1,'ProductData']]],
   ['revenuemultiplier_1362',['RevenueMultiplier',['../class_game_settings.html#a3090c2e24d295733a7890e1c50d49a7f',1,'GameSettings']]],
   ['rightbottom_1363',['RightBottom',['../struct_traversal_points.html#ad44bcd52b500ce763bcf2c630b7ad321',1,'TraversalPoints']]],
   ['righttop_1364',['RightTop',['../struct_traversal_points.html#a07bb276d1eb0d8dacf176186c248194e',1,'TraversalPoints']]],

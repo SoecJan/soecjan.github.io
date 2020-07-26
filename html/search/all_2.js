@@ -16,7 +16,7 @@ var searchData=
   ['buildingcategory_52',['BuildingCategory',['../class_building_data.html#a80feaa4fb7acbc52c6f65405420ad692',1,'BuildingData']]],
   ['buildingdata_53',['BuildingData',['../class_building_data.html',1,'BuildingData'],['../class_product_processor_behaviour.html#ae60dd4a660d4ee6646559a058e6fe438',1,'ProductProcessorBehaviour.BuildingData()'],['../class_construction_element_view.html#ae6530beafb2223707f689d9cbc8d8c00',1,'ConstructionElementView.BuildingData()']]],
   ['buildingdata_2ecs_54',['BuildingData.cs',['../_building_data_8cs.html',1,'']]],
-  ['buildingmanager_55',['BuildingManager',['../class_building_manager.html',1,'BuildingManager'],['../class_game_handler.html#a0f0238a5b79ffe53bbd69a0f97d8752b',1,'GameHandler.BuildingManager()'],['../class_building_manager.html#a8ebb53399e6981fd327b1538cb420378',1,'BuildingManager.BuildingManager()']]],
+  ['buildingmanager_55',['BuildingManager',['../class_building_manager.html',1,'BuildingManager'],['../class_game_handler.html#a0f0238a5b79ffe53bbd69a0f97d8752b',1,'GameHandler.BuildingManager()'],['../class_path_finding_node.html#a807df76c5145a828f209a77c86e09a42',1,'PathFindingNode.BuildingManager()'],['../class_building_manager.html#a8ebb53399e6981fd327b1538cb420378',1,'BuildingManager.BuildingManager()']]],
   ['buildingmanager_2ecs_56',['BuildingManager.cs',['../_building_manager_8cs.html',1,'']]],
   ['buildingname_57',['BuildingName',['../class_building_data.html#aeea40db8aed06973b59f6d4c69010712',1,'BuildingData']]],
   ['buildingprice_58',['BuildingPrice',['../class_building_data.html#a55ba6ce2a3cd16106e95b0ac893c6210',1,'BuildingData']]],
