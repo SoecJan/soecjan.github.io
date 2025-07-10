@@ -1,0 +1,1 @@
+import{Xa as o}from"./chunk-2ONKFOJO.js";var e=class t{title="caravan";static \u0275fac=function(p){return new(p||t)};static \u0275cmp=o({type:t,selectors:[["app-caravan"]],decls:0,vars:0,template:function(p,n){},encapsulation:2})};var m=[{path:"",component:e}];export{m as routes};
