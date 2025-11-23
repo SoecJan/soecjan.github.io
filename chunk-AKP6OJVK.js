@@ -1,1 +1,0 @@
-import{j as s}from"./chunk-R5CCZWKX.js";var e=class{_state;_state$;constructor(t){this._state$=new s(t),this._state=t}get state(){return this._state}get state$(){return this._state$}setState(t){this._state=t,this._state$.next(t)}};export{e as a};

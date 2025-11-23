@@ -1,0 +1,25 @@
+<mat-card>
+    <mat-card-header>
+    </mat-card-header>
+    <mat-card-content>
+        <span class="mat-h1">Mitspieler</span>
+        <br>
+        <br>
+        <div class="inputForm" [formGroup]="form">
+            <div formArrayName="players" *ngFor="let item of playerControls; let i = index;">
+                <mat-form-field [formGroupName]="i">
+                    <mat-label>Spieler {{i+1}}</mat-label>
+                    <input (change)="onChange(i, $event)" matInput formControlName="name" placeholder="Name">
+                </mat-form-field>
+            </div>
+        </div>
+        <button mat-button (click)="addPlayer()">
+            <mat-icon>add</mat-icon>
+            <span> Spieler hinzufügen</span>
+        </button>
+    </mat-card-content>
+    <mat-card-actions>
+        <p mat-h4>{{playerAmount}} Spieler</p>
+        <button (click)="onStartClick()" mat-button>STARTEN</button>
+    </mat-card-actions>
+</mat-card>

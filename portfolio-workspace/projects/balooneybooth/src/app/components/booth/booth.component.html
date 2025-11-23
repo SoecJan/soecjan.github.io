@@ -1,0 +1,21 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title *ngIf="(!isLocked)">{{title}}</mat-card-title>
+    <mat-card-title *ngIf="(!!isLocked)">{{title}}: Timer - {{counter}}s</mat-card-title>
+    <mat-card-subtitle>Wähle 2 Optionen, welche in Kombination dein Produkt ergeben</mat-card-subtitle>
+  </mat-card-header>
+  <mat-selection-list #baloneyList (selectionChange)="onSelection($event, baloneyList.selectedOptions.selected)">
+    <mat-list-option [disabled]="(!!isLocked || !!isCounting)" [value]='baloney' *ngFor="let baloney of shownBaloneys">
+      {{baloney?.contentDe}}
+    </mat-list-option>
+  </mat-selection-list>
+  <mat-card-actions>
+    <button [disabled]="(!isLockable || !!isLocked || !!isCounting)" (click)="lockItems()"
+      mat-button>BESTÄTIGEN</button>
+    <button *ngIf="!isCounting" [disabled]="(!isLocked || !!isCounting)" (click)="startCounter()" mat-button>TIMER
+      STARTEN</button>
+    <button *ngIf="(!!isCounting)" [disabled]="(counter === 0)" (click)="stopCounter()" mat-button>TIMER
+      STOPPEN</button>
+    <button [disabled]="(counter !== 0)" (click)="reset()" mat-button>WEITER</button>
+  </mat-card-actions>
+</mat-card>

@@ -1,0 +1,13 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>{{title}}</mat-card-title>
+    <mat-card-subtitle>Deine Rolle aus welcher deine Kaufentscheidung getroffen wird</mat-card-subtitle>
+  </mat-card-header>
+  <mat-list role="list">
+    <mat-list-item role="listitem">{{customer$ | async}}</mat-list-item>
+  </mat-list>
+  <mat-card-actions>
+    <button (click)="next()"
+            mat-button>WEITER</button>
+    </mat-card-actions>
+</mat-card>

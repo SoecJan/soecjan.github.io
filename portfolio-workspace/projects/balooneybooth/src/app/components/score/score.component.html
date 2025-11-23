@@ -1,0 +1,14 @@
+<mat-card>
+  <mat-card-header>
+    <h4>{{title}}</h4>
+  </mat-card-header>
+  <mat-list role="list">
+    <mat-list-item role="listitem">{{score}}</mat-list-item>
+  </mat-list>
+  <mat-card-actions>
+    <button (click)="addToScore(-1)"
+            mat-button>MINUS</button>
+    <button (click)="addToScore(1)"
+            mat-button>PLUS</button>
+  </mat-card-actions>
+</mat-card>

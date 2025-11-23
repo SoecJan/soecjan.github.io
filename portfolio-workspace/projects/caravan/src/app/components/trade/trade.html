@@ -1,0 +1,12 @@
+<h3>City</h3>
+
+<div class="product-choice-container">
+    <mat-card>
+        <p>Kaufen</p>
+        @for (buyableProduct of buyableProducts; track buyableProduct.product.name) {
+            @if (buyableProduct.availableAmount > 0) {
+                <button matButton (click)="onBuy(buyableProduct)">1x {{buyableProduct.product.name}} ({{buyableProduct.availableAmount}}) für {{buyableProduct.price}}€</button>
+            }
+        }
+    </mat-card>
+</div>

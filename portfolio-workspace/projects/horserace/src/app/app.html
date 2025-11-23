@@ -1,0 +1,48 @@
+<mat-card>
+  <h3>{{title}}</h3>
+
+  <div class="actions">
+    <mat-accordion>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Optionen
+          </mat-panel-title>
+          <mat-panel-description>
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <div class="options">
+          <mat-form-field appearance="fill">
+            <mat-label>Geschwindigkeit</mat-label>
+            <input matInput type="number" [(ngModel)]="options.speed" (change)="reset()">
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>Anzahl der Pferde</mat-label>
+            <input matInput type="number" [(ngModel)]="options.horseCount" (change)="reset()">
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>Distanz</mat-label>
+            <input matInput type="number" [(ngModel)]="options.distance" (change)="reset()">
+          </mat-form-field>
+        </div>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+
+  <mat-divider></mat-divider>
+
+  @let horseRace = horseRace$ | async;
+  <div class="horse-race-container">
+    <div *ngFor="let horse of horseRace; let i = index" class="horse">
+      <span class="horse-title">Pferd {{ i + 1 }}</span>
+      <mat-slider min="0" [max]="options.distance" step="1">
+         <input matSliderThumb [value]="horse" #slider>
+      </mat-slider>
+      <span *ngIf="horse < options.distance" class="horse-title">{{horse | number: '1.2-2'}}m</span>
+      <span *ngIf="horse === options.distance" class="horse-title">Sieg!</span>
+    </div>
+  </div>
+  <mat-card-actions>
+    <button [disabled]="racing" (click)="startRace()" mat-button>START</button>
+  </mat-card-actions>
+</mat-card>

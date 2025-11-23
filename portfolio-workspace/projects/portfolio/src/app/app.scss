@@ -1,0 +1,21 @@
+mat-toolbar-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+mat-drawer-container {
+    height: 100%;
+}
+
+.sidenav-element-container {
+    display: flex;
+    flex-direction: column;
+
+    .sidenav-element {
+        margin: 12px;
+    }
+}
+
+.homepage-button {
+    margin: 10px 10px;
+}

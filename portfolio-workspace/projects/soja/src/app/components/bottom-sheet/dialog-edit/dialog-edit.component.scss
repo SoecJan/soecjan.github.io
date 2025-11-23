@@ -1,0 +1,11 @@
+.dialog-icon {
+    align-self: center;
+    margin-left: 16px;
+}
+
+mat-dialog-content {
+    form {
+        display: flex;
+        justify-content: space-evenly;
+    }
+}

@@ -1,0 +1,17 @@
+
+    <h3>Weiterfahrt</h3>
+    <div class="route-choice-container">
+        
+        @for (route of routes; track route.name) {
+        <mat-card>
+            <p>{{route.name}}</p>
+            <ul>
+                <li>Typ: {{route.type}}</li>
+                <li>Distanz: {{route.distance}}</li>
+                <li>Gelände: {{route.terrain}}</li>
+                <li>Dauer: {{route.travelTime}}h</li>
+            </ul>
+            <button matButton (click)="chooseRoute(route)">Wählen</button>
+        </mat-card>
+        }
+    </div>

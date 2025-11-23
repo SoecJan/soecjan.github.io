@@ -1,0 +1,20 @@
+<div class="container">
+    <mat-card class="item">
+        <mat-card-header>
+            <mat-card-title>Befrage die magische Miesmuschel</mat-card-title>
+            <mat-card-subtitle>Stelle eine Ja/Nein Frage und ziehe an der Schnur</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image *ngIf="state === 'hold'" class="image item"
+            src="https://i.ytimg.com/vi/Lu5SJcNp0J0/maxresdefault.jpg">
+        <img mat-card-image *ngIf="state === 'pull'" class="image item"
+            src="https://media1.tenor.com/m/9Hcp8BrWo5sAAAAd/spongebob-magic.gif">
+        <mat-card-content>
+            <h3 class="centered" [ngClass]="state === 'hold' ? '' : 'hidden'">{{saying}}</h3>
+        </mat-card-content>
+        <mat-card-actions>
+            <button [disabled]="state === 'pull'" class="item" color="primary" matButton="filled" (click)="next()">
+                An der Schnur ziehen
+            </button>
+        </mat-card-actions>
+    </mat-card>
+</div>

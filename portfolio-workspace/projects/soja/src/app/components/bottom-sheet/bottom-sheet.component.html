@@ -1,0 +1,31 @@
+<mat-list class="container">
+    <mat-list-item (click)="onRestartClick()">
+        <mat-icon matListItemIcon>play_arrow</mat-icon>
+        <span>Neustart</span>
+    </mat-list-item>
+    <mat-list-item (click)="onRefreshClick($event)">
+        <mat-icon matListItemIcon>refresh</mat-icon>
+        <span>Aktualisieren</span>
+    </mat-list-item>
+    <mat-list-item (click)="onChangeClick($event)">
+        <mat-icon matListItemIcon>edit</mat-icon>
+        <span>Bearbeiten</span>
+    </mat-list-item>
+    <mat-list-item (click)="onAddClick($event)">
+        <mat-icon matListItemIcon>add</mat-icon>
+        <span>Hinzufügen</span>
+    </mat-list-item>
+    <mat-list-item (click)="onDeleteClick($event)">
+        <mat-icon matListItemIcon>delete</mat-icon>
+        <span>Löschen</span>
+    </mat-list-item>
+    <mat-list-item (click)="onDownloadClick($event)">
+        <mat-icon matListItemIcon>download</mat-icon>
+        <span>Herunterladen</span>
+    </mat-list-item>
+    <input #csvInput hidden="true" type="file" onclick="this.value=null" (change)="onUploadClick($event)" accept=".json"/>
+    <mat-list-item (click)="csvInput.click()">
+        <mat-icon matListItemIcon>upload</mat-icon>
+        <span>Hochladen</span>
+    </mat-list-item>
+</mat-list>

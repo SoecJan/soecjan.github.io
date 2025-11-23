@@ -1,0 +1,43 @@
+<mat-card>
+  <h3>Errate eine Zahl zwischen 0 und {{options.totalGuessCount}}</h3>
+
+  <div class="actions">
+    <mat-accordion>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Optionen
+          </mat-panel-title>
+          <mat-panel-description>
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <div class="options">
+          <mat-form-field appearance="fill">
+            <mat-label>Anzahl der Zahlen</mat-label>
+            <input matInput type="number" [(ngModel)]="options.totalGuessCount" (change)="reset()">
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>Anzahl möglicher Versuche</mat-label>
+            <input matInput type="number" [(ngModel)]="options.maxNumTries" (change)="reset()">
+          </mat-form-field>
+        </div>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+
+  <mat-divider></mat-divider>
+
+  <div class="numbers">
+    <button mat-raised-button class="element" *ngFor="let element of numbers"
+      [ngClass]="element.guessed  &&  element.value === secretNumber ? 'guessed-number' : ''"
+      [disabled]="element.guessed" (click)="guessNumber(element.value)">{{ element.value }}</button>
+  </div>
+
+  <div class="result" [ngClass]="done ? 'show' : ''">
+    <button mat-raised-button [disabled]="!done" (click)="reset()" color="primary">
+      Neustarten
+    </button>
+    <p>Anzahl Versuche: {{currentGuessCount}}</p>
+    <p>{{ !done ? 'Zahl wurde noch nicht erraten' : 'Geheime Zahl war ' + secretNumber }}</p>
+  </div>
+</mat-card>

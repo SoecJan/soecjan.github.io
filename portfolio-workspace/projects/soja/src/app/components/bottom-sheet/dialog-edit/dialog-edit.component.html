@@ -1,0 +1,25 @@
+<span style="display: flex;">
+    <mat-icon class="dialog-icon">edit</mat-icon>
+    <h2 mat-dialog-title>Bearbeiten</h2>
+</span>
+<mat-dialog-content class="mat-typography">
+    <form [formGroup]="form">
+        <mat-form-field>
+            <mat-label>Titel</mat-label>
+            <input matInput formControlName="title" [value]="smorle.title">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Inhalt</mat-label>
+            <input matInput formControlName="content" [value]="smorle.content">
+        </mat-form-field>
+    </form>
+    <p mat-h4>
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+        dolore magna aliquyam erat, sed diam voluptua.
+    </p>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Schließen</button>
+    <button mat-button [mat-dialog-close]="true" (click)="onSubmit()" cdkFocusInitial>Speichern</button>
+</mat-dialog-actions>

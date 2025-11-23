@@ -1,0 +1,52 @@
+mat-card {
+  padding: 1rem;
+  margin: 1rem;
+  justify-content: center;
+
+  h3 {
+    text-align: center;
+  }
+
+  mat-divider {
+    margin: 8px 0px;
+  }
+
+  .options {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .result {
+    margin: 8px;
+    visibility: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    &.show{
+      visibility: visible;
+    }
+  }
+
+  .actions {
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .numbers {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    
+    .guessed-number {
+      background-color: green;
+    }
+
+    .element {
+      margin: 5px;
+      min-height: 60px;
+      min-width: 60px;
+    }
+  }
+}

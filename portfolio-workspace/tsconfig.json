@@ -1,0 +1,81 @@
+/* To learn more about Typescript configuration file: https://www.typescriptlang.org/docs/handbook/tsconfig-json.html. */
+/* To learn more about Angular compiler options: https://angular.dev/reference/configs/angular-compiler-options. */
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "strict": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "skipLibCheck": true,
+    "isolatedModules": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "paths": {
+      "store": [
+        "./dist/store"
+      ]
+    },
+    "target": "ES2022",
+    "module": "preserve"
+  },
+  "angularCompilerOptions": {
+    "enableI18nLegacyMessageIdFormat": false,
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true,
+    "typeCheckHostBindings": true,
+    "strictTemplates": true
+  },
+  "files": [],
+  "references": [
+    {
+      "path": "./projects/balooneybooth/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/balooneybooth/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/caravan/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/caravan/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/guesser/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/guesser/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/horserace/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/horserace/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/magicclam/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/magicclam/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/portfolio/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/portfolio/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/soja/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/soja/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/store/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/store/tsconfig.spec.json"
+    }
+  ]
+}

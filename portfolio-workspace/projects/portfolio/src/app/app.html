@@ -1,0 +1,29 @@
+<mat-drawer-container autosize>
+    <mat-drawer [(opened)]="opened" class="mat-sidenav" mode="side">
+        <button mat-button class="homepage-button" (click)="navigate('/')">Zurück zur Startseite</button>
+        <p>Desktop</p>
+        <hr>
+        <div class="sidenav-element-container">
+            <button *ngFor="let nativeGame of nativeGames" class="sidenav-element" matButton="filled" (click)="navigate(nativeGame.route)">
+                {{nativeGame.name}}
+            </button>
+        </div>
+        <p>Web</p>
+        <hr>
+        <div class="sidenav-element-container">
+            <button *ngFor="let webGame of webGames" class="sidenav-element" matButton="filled" (click)="navigate(webGame.route)">
+                {{webGame.name}}
+            </button>
+        </div>
+    </mat-drawer>
+    <mat-toolbar>
+        <mat-toolbar-row>
+            <button mat-icon-button (click)="opened = !opened">
+                <mat-icon>menu</mat-icon>
+            </button>
+            <span>Portfolio</span>
+            <app-darkmode-toggle></app-darkmode-toggle>
+        </mat-toolbar-row>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+</mat-drawer-container>

@@ -1,0 +1,32 @@
+mat-card {
+    margin: 16px;
+    top: 15%;
+
+    mat-card-content {
+        margin: 15px;
+        text-align: center;
+    }
+
+    mat-card-actions {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row;
+
+        & button {
+            width: 100%;
+        }
+
+        & p {
+            width: 100%;
+            text-align: center;
+        }
+    }
+}
+
+.inputForm {
+    width: fit-content;
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: 50vh;
+    margin: 0 auto;
+}

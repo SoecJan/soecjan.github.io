@@ -1,0 +1,14 @@
+<button mat-button class="settings" (click)="openBottomSheet()">
+  <p>Einstellungen</p>
+  <mat-icon class="white-icon">settings</mat-icon>
+</button>
+<mat-card *ngIf="soja$ | async as soja">
+  <mat-card-content>
+    <p class="mat-h1">{{soja.title}}</p>
+    <p class="mat-h3">{{soja.content}}</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <p mat-h4>{{soja.progress}}</p>
+    <button mat-raised-button (click)="onNextClick()">WEITER</button>
+  </mat-card-actions>
+</mat-card>
