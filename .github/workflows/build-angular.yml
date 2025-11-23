@@ -5,8 +5,8 @@ name: Build and deploy to github pages
 
 on:
   push:
-    tags:
-      - "*"
+    branches:
+      - master
 
 jobs:
   build:
