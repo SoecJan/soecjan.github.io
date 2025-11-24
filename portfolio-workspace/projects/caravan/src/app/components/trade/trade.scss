@@ -2,8 +2,13 @@
   display: block;
 }
 
-.product-choice-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+.trade-container {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  justify-content: space-around;
+  
+  .centered {
+    text-align: center;
+  }
 }

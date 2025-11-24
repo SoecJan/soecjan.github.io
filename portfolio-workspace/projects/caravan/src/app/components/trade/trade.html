@@ -1,12 +1,39 @@
 <h3>City</h3>
 
-<div class="product-choice-container">
+@let sellableProductArray = sellableProducts | async;
+
+<mat-tab-group mationDuration="300ms" dynamicHeight>
+  <mat-tab label="Handeln">
     <mat-card>
-        <p>Kaufen</p>
-        @for (buyableProduct of buyableProducts; track buyableProduct.product.name) {
-            @if (buyableProduct.availableAmount > 0) {
-                <button matButton (click)="onBuy(buyableProduct)">1x {{buyableProduct.product.name}} ({{buyableProduct.availableAmount}}) für {{buyableProduct.price}}€</button>
-            }
-        }
+      <div class="trade-container">
+        <div>
+            <p class="centered">Kaufen</p>
+            @for (buyableProduct of buyableProducts; track
+            buyableProduct.product.name) { @if (buyableProduct.availableAmount > 0)
+            {
+            <button matButton (click)="onBuy(buyableProduct)">
+              1x {{ buyableProduct.product.name }} ({{
+                buyableProduct.availableAmount
+              }}) für {{ buyableProduct.price }}€
+            </button>
+            } }
+        </div>
+        <div>
+            <p class="centered">Verkaufen</p>
+            @for (sellableProduct of sellableProductArray; track
+            sellableProduct.product.name) { @if (sellableProduct.availableAmount > 0)
+            {
+            <button matButton (click)="onSell(sellableProduct)">
+              1x {{ sellableProduct.product.name }} ({{
+                sellableProduct.availableAmount
+              }}) für {{ sellableProduct.price }}€
+            </button>
+            } }
+        </div>
+      </div>
     </mat-card>
-</div>
+  </mat-tab>
+  <mat-tab label="Gerüchte"></mat-tab>
+  <mat-tab label="Ansehen"></mat-tab>
+  <mat-tab label="Quests"></mat-tab>
+</mat-tab-group>
