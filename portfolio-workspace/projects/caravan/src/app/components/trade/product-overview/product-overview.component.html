@@ -1,0 +1,8 @@
+<p class="centered">{{ title() }}</p>
+@for (product of products(); track product.product.name) { 
+    @if (product.availableAmount > 0) {
+        <button matButton (click)="onAction(product)">
+            1x {{ product.product.name }} ({{ product.availableAmount }}) für {{ product.price }}€
+        </button>
+    }
+}

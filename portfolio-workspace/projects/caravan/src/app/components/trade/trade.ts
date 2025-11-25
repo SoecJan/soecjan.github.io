@@ -12,11 +12,11 @@ import { TradeAction, TradeProduct } from '../../types/trade.types';
 import { ProductStore } from '../../stores/product/product.store';
 import { TradeService } from '../../services/trade/trade.service';
 import { MatTabsModule } from '@angular/material/tabs';
-import { PlayerInventoryService } from '../../services/inventory/player-inventory.service';
 import { PlayerInventoryStoreState } from '../../stores/inventory/player-inventory.state';
 import { map, Observable } from 'rxjs';
 import { CommonModule } from '@angular/common';
 import { PlayerInventoryStore } from '../../stores/inventory/player-inventory.store';
+import { ProductOverviewComponent } from './product-overview/product-overview.component';
 
 @Component({
   selector: 'app-trade',
@@ -26,12 +26,13 @@ import { PlayerInventoryStore } from '../../stores/inventory/player-inventory.st
     MatDividerModule,
     MatButtonModule,
     MatTabsModule,
+    ProductOverviewComponent
   ],
   templateUrl: './trade.html',
   styleUrl: './trade.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class Trade implements OnInit {
+export class Trade {
   buyableProducts: TradeProduct[] = [];
   sellableProducts: Observable<TradeProduct[]>;
 
@@ -61,8 +62,6 @@ export class Trade implements OnInit {
       })
     );
   }
-
-  ngOnInit(): void {}
 
   onBuy(tradeProduct: TradeProduct) {
     if (tradeProduct.availableAmount === 0) {

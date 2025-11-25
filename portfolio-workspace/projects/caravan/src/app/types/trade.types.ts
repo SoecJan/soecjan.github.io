@@ -8,5 +8,5 @@ export type TradeProduct = {
 
 export type TradeAction = {
     product: Product
-    action: 'Sell' | 'Buy';
+    action: 'Sell' | 'Buy' | undefined;
 }
