@@ -1,5 +1,5 @@
 import { Component, input, output } from '@angular/core';
-import { TradeProduct } from '../../../types/trade.types';
+import { TradeProduct } from '../../../../types/trade.types';
 import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 

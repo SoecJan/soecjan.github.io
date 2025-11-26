@@ -2,15 +2,15 @@ import { Component } from '@angular/core';
 import { Inventory } from './components/inventory/inventory';
 import { Route } from './components/route/route';
 import { Stats } from './components/stats/stats';
-import { Trade } from './components/trade/trade';
 import { RouteElement } from './types/route.types';
 import { TradeAction } from './types/trade.types';
+import { Trade } from './components/trade/trade';
 
 @Component({
   selector: 'app-caravan',
   imports: [Inventory, Route, Stats, Trade],
   templateUrl: './app.html',
-  styleUrl: './app.scss'
+  styleUrl: './app.scss',
 })
 export class App {
   protected title = 'caravan';

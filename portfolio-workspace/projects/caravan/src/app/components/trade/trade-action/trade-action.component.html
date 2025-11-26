@@ -1,0 +1,37 @@
+<h3>City</h3>
+<mat-tab-group mationDuration="300ms" dynamicHeight>
+  <mat-tab label="Handeln">
+    <mat-card>
+      <div class="trade-container">
+        <app-product-overview
+          [products]="buyableProducts()"
+          [title]="'Kaufen'"
+          [type]="'Buy'"
+          (tradeAction)="onBuy($event)"
+        ></app-product-overview>
+        <app-product-overview
+          [products]="sellableProducts()"
+          [title]="'Verkaufen'"
+          [type]="'Sell'"
+          (tradeAction)="onSell($event)"
+        ></app-product-overview>
+      </div>
+      <div class="trade-container">
+        <p> Summe: {{ tradeSum }} </p>
+        <button matButton (click)="executeTrade()"> Handel abschließen </button>
+        <button matButton (click)="startBargain()"> Feilschen </button>
+      </div>
+    </mat-card>
+  </mat-tab>
+  <mat-tab label="Gerüchte">
+    <button matButton> Kostet 225€ - Erfahre ein Gerücht über ein lukratives Produkt </button>
+    <button matButton> Kostet 370€ - Erfahre ein Gerücht über eine Stadt </button>
+    <button matButton> Kostet 650€ - Erfahre ein Gerücht über eine sichere Handelsroute </button>
+  </mat-tab>
+  <mat-tab label="Ansehen">
+    <button matButton> Kostet 150€ - Erhöhe dein Ansehen in dieser Stadt </button>
+  </mat-tab>
+  <mat-tab label="Aufträge">
+    <button matButton> Bringe diesen Brief nach Stadt A - Belohnung: 5€ </button>
+  </mat-tab>
+</mat-tab-group>
