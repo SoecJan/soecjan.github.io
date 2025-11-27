@@ -1,23 +1,23 @@
 import { Injectable } from '@angular/core';
 import { TradeStore } from '../../stores/trade/trade.store';
-import { TradeAction } from '../../types/trade.types';
+import { TradeTransaction } from '../../types/trade.types';
 import { TradeStoreState } from '../../stores/trade/trade.store.state';
 import { Observable } from 'rxjs';
 
 @Injectable({ providedIn: 'root' })
 export class TradeService {
-  trade$: Observable<TradeStoreState>;
+  tradeState$: Observable<TradeStoreState>;
 
   constructor(private readonly tradeStore: TradeStore) {
-    this.trade$ = this.tradeStore.state$;
+    this.tradeState$ = this.tradeStore.state$;
   }
 
-  add(tradeAction: TradeAction): void {
+  add(tradeTransaction: TradeTransaction): void {
     const currentState = this.tradeStore.state;
 
     this.tradeStore.setState({
-      tradeAction: tradeAction,
-      tradeHistory: [tradeAction, ...currentState.tradeHistory],
+      lastTradeTransaction: tradeTransaction,
+      tradeHistory: [tradeTransaction, ...currentState.tradeHistory],
     });
   }
 }

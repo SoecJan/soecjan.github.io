@@ -1,5 +1,5 @@
 import { Component, input, output } from '@angular/core';
-import { TradeProduct } from '../../../../types/trade.types';
+import { TradeOfferProduct } from '../../../../types/trade.types';
 import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 
@@ -12,11 +12,11 @@ import { MatButtonModule } from '@angular/material/button';
 export class ProductOverviewComponent {
   title = input<string>();
   type = input<'Sell' | 'Buy'>();
-  products = input<TradeProduct[] | null | undefined>();
+  products = input<TradeOfferProduct[] | null | undefined>();
 
-  tradeAction = output<TradeProduct>();
+  tradeAction = output<TradeOfferProduct>();
 
-  onAction(product: TradeProduct) {
+  onAction(product: TradeOfferProduct) {
     this.tradeAction.emit(product);
   }
 }

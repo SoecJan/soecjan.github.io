@@ -5,6 +5,5 @@ export type Product = {
 
 export type ProductStorage = {
     amount: number;
-    maxAmount: number;
     product: Product;
 }

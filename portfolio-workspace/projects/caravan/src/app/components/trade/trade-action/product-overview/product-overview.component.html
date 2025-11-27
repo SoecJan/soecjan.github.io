@@ -1,8 +1,10 @@
 <p class="centered">{{ title() }}</p>
-@for (product of products(); track product.product.name) { 
+<div class="flex-column">
+@for (product of products(); track product.tradeProduct.product.name) { 
     @if (product.availableAmount > 0) {
         <button matButton (click)="onAction(product)">
-            1x {{ product.product.name }} ({{ product.availableAmount }}) für {{ product.price }}€
+            1x {{ product.tradeProduct.product.name }} ({{ product.availableAmount }}) für {{ product.tradeProduct.price }}€
         </button>
     }
 }
+</div>

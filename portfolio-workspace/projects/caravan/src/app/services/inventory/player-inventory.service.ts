@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
-import { ProductStore } from '../../stores/product/product.store';
 import { PlayerInventoryStore } from '../../stores/inventory/player-inventory.store';
-import { distinctUntilChanged, map, Observable, startWith } from 'rxjs';
+import { map, Observable, startWith } from 'rxjs';
 import { PlayerInventoryStoreState } from '../../stores/inventory/player-inventory.state';
 import { TradeService } from '../trade/trade.service';
 import { TradeStoreState } from '../../stores/trade/trade.store.state';
@@ -14,39 +13,64 @@ export class PlayerInventoryService {
     private readonly tradeService: TradeService,
     private readonly playerInventoryStore: PlayerInventoryStore
   ) {
-    this.playerInventory$ = this.tradeService.trade$.pipe(
+    this.playerInventory$ = this.tradeService.tradeState$.pipe(
       map((tradeStoreState: TradeStoreState) => {
-        const currentAction = tradeStoreState.tradeAction;
-        if (!currentAction) {
+        const lastTradeTransaction = tradeStoreState.lastTradeTransaction;
+        if (!lastTradeTransaction) {
           return this.playerInventoryStore.state;
         }
         const currentInventoryState = this.playerInventoryStore.state;
-        if (currentAction.action === 'Buy') {
-          const storageIndex = currentInventoryState.storageArray.findIndex(productStorage => productStorage.product.name === currentAction.product.name);
-          let newStorage: PlayerInventoryStoreState = {money: currentInventoryState.money - currentAction.product.marketBaseValue, storageArray: currentInventoryState.storageArray};
+        let moneyExchange = 0;
+        if (lastTradeTransaction.action === 'Sell') {
+          const totalEarnedPrice =
+            lastTradeTransaction.tradeProductArray.reduce(
+              (sum, tradeProduct) => sum + tradeProduct.price,
+              0
+            ) * lastTradeTransaction.bargainFactor;
+          moneyExchange += totalEarnedPrice;
+        } else if (lastTradeTransaction.action === 'Buy') {
+          const paidTotalPrice =
+            lastTradeTransaction.tradeProductArray.reduce(
+              (sum, tradeProduct) => sum + tradeProduct.price,
+              0
+            ) * lastTradeTransaction.bargainFactor;
+          moneyExchange -= paidTotalPrice;
+        }
+        let newInventoryState: PlayerInventoryStoreState = {
+          money: currentInventoryState.money + moneyExchange,
+          storageArray: currentInventoryState.storageArray,
+        };
+
+        lastTradeTransaction.tradeProductArray.forEach((tradeProduct) => {
+          const storageIndex = currentInventoryState.storageArray.findIndex(
+            (productStorage) =>
+              productStorage.product.name === tradeProduct.product.name
+          );
           if (storageIndex < 0) {
             // Storage existiert noch nicht
-            newStorage.storageArray.push({
-              product: currentAction.product,
-              amount: 1,
-              maxAmount: 10
-            })
+            if (lastTradeTransaction.action === 'Sell') {
+              throw new Error(
+                'Trying to sell a product that is not in the inventory'
+              );
+            } else if (lastTradeTransaction.action === 'Buy') {
+              newInventoryState.storageArray.push({
+                product: tradeProduct.product,
+                amount: 1,
+              });
+            }
           } else {
             // Storage existiert bereits
-            newStorage.storageArray[storageIndex].amount += 1;
+            if (lastTradeTransaction.action === 'Buy') {
+              newInventoryState.storageArray[storageIndex].amount += 1;
+            } else if (lastTradeTransaction.action === 'Sell') {
+              newInventoryState.storageArray[storageIndex].amount -= 1;
+              if (newInventoryState.storageArray[storageIndex].amount <= 0) {
+                newInventoryState.storageArray.splice(storageIndex, 1);
+              }
+            }
           }
-          this.playerInventoryStore.setState(newStorage);
-        } else if (currentAction.action === 'Sell') {
-          const storageIndex = currentInventoryState.storageArray.findIndex(productStorage => productStorage.product.name === currentAction.product.name);
-          let newStorage: PlayerInventoryStoreState = {money: currentInventoryState.money + currentAction.product.marketBaseValue * 0.8, storageArray: currentInventoryState.storageArray};
-          if (storageIndex < 0) {
-            throw new Error('Trying to sell a product that is not in the inventory');
-          } else {
-            // Storage existiert bereits
-            newStorage.storageArray[storageIndex].amount -= 1;
-          }
-          this.playerInventoryStore.setState(newStorage);
-        }
+        });
+        this.playerInventoryStore.setState(newInventoryState);
         return this.playerInventoryStore.state;
       }),
       startWith(this.playerInventoryStore.state)

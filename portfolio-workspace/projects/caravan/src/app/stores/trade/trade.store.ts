@@ -5,6 +5,6 @@ import { TradeStoreState } from './trade.store.state';
 @Injectable({ providedIn: 'root' })
 export class TradeStore extends Store<TradeStoreState> {
   constructor() {
-    super({ tradeAction: undefined, tradeHistory: [] });
+    super({ lastTradeTransaction: undefined, tradeHistory: [] });
   }
 }

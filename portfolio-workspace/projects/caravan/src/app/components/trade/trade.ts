@@ -1,12 +1,10 @@
 import { Component } from '@angular/core';
-import { map, Observable, of } from 'rxjs';
-import { TradeProduct } from '../../types/trade.types';
-import { ProductStore } from '../../stores/product/product.store';
+import { combineLatest, filter, map, Observable, of } from 'rxjs';
+import { TradeOfferProduct, TradePoint } from '../../types/trade.types';
 import { PlayerInventoryStore } from '../../stores/inventory/player-inventory.store';
-import { Product } from '../../types/inventory.types';
-import { PlayerInventoryStoreState } from '../../stores/inventory/player-inventory.state';
 import { CommonModule } from '@angular/common';
 import { TradeActionComponent } from './trade-action/trade-action.component';
+import { TradePointService } from '../../services/trade/trade-point.service';
 
 @Component({
   selector: 'app-trade',
@@ -15,34 +13,50 @@ import { TradeActionComponent } from './trade-action/trade-action.component';
   styleUrl: './trade.scss',
 })
 export class Trade {
-  buyableProducts$: Observable<TradeProduct[]>;
-  sellableProducts$: Observable<TradeProduct[]>;
+  title$: Observable<string>;
+  buyableProducts$: Observable<TradeOfferProduct[]>;
+  sellableProducts$: Observable<TradeOfferProduct[]>;
 
   constructor(
-    private readonly productStore: ProductStore,
+    private readonly tradePointService: TradePointService,
     private readonly playerInventoryStore: PlayerInventoryStore
   ) {
-    this.buyableProducts$ = of(this.productStore.getAllProducts()).pipe(
-      map((products: Product[]) => {
-        return products.map((product) => {
-          return {
-            product: product,
-            availableAmount: 5,
-            price: product.marketBaseValue * 1.2,
-          };
-        });
+    this.title$ = this.tradePointService.tradePoint$.pipe(
+    map((tradePoint) => tradePoint?.name || 'Kein Handelsplatz')
+  );
+    this.buyableProducts$ = this.tradePointService.tradePoint$.pipe(
+      filter(tradePoint => tradePoint !== undefined),
+      map((tradePoint: TradePoint) => {
+        return tradePoint.buyableProducts;
       })
     );
-    this.sellableProducts$ = this.playerInventoryStore.state$.pipe(
-      map((playerInventoryStoreState: PlayerInventoryStoreState) => {
-        return playerInventoryStoreState.storageArray.map((storageItem) => {
-          return {
-            product: storageItem.product,
-            availableAmount: storageItem.amount,
-            price: storageItem.product.marketBaseValue * 0.8,
-          };
-        });
+    this.sellableProducts$ = combineLatest([
+      this.playerInventoryStore.state$,
+      this.tradePointService.tradePoint$,
+    ]).pipe(
+      map(([playerInventoryStoreState, tradePoint]) => {
+        if (tradePoint === undefined) {
+          return [];
+        }
+        return playerInventoryStoreState.storageArray
+          .map((storageItem) => {
+            const tradePointProduct = tradePoint.sellableProducts.find(
+              (tp) => tp.product.name === storageItem.product.name
+            );
+            if (!tradePointProduct) {
+              return undefined;
+            }
+            return {
+              tradeProduct: {
+                product: storageItem.product,
+                price: tradePointProduct.price,
+              },
+              availableAmount: storageItem.amount,
+            };
+          })
+          .filter((product) => product !== undefined);
       })
     );
+    this.tradePointService.next();
   }
 }

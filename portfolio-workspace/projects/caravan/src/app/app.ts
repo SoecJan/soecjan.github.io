@@ -3,8 +3,9 @@ import { Inventory } from './components/inventory/inventory';
 import { Route } from './components/route/route';
 import { Stats } from './components/stats/stats';
 import { RouteElement } from './types/route.types';
-import { TradeAction } from './types/trade.types';
+import { TradeTransaction } from './types/trade.types';
 import { Trade } from './components/trade/trade';
+import { TradePointService } from './services/trade/trade-point.service';
 
 @Component({
   selector: 'app-caravan',
@@ -14,13 +15,16 @@ import { Trade } from './components/trade/trade';
 })
 export class App {
   protected title = 'caravan';
-  tradeAction: TradeAction | undefined;
+  tradeAction: TradeTransaction | undefined;
+
+  constructor(private readonly tradePointService: TradePointService) {}
 
   onRouteChosen(route: RouteElement) {
     console.log(route);
+    this.tradePointService.next();
   }
 
-  onTradeAction(trade: TradeAction) {
+  onTradeAction(trade: TradeTransaction) {
     this.tradeAction = trade;
   }
 }
