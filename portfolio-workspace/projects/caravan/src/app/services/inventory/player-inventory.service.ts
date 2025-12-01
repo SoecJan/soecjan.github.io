@@ -37,7 +37,7 @@ export class PlayerInventoryService {
           moneyExchange -= paidTotalPrice;
         }
         let newInventoryState: PlayerInventoryStoreState = {
-          money: currentInventoryState.money + moneyExchange,
+          money: currentInventoryState.money + Math.round(moneyExchange),
           storageArray: currentInventoryState.storageArray,
         };
 

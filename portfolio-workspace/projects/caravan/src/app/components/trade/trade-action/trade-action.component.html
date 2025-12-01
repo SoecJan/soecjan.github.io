@@ -8,6 +8,22 @@
           [type]="'Buy'"
           (tradeAction)="onBuy($event)"
         ></app-product-overview>
+        <div>
+          <p class="centered">Handel</p>
+          <div class="flex-column">
+@for (boughtProduct of boughtProducts; track boughtProduct.product.name) { 
+            <button matButton>
+              Kaufe {{ boughtProduct.product.name }} für {{ boughtProduct.price }}€
+            </button>
+}
+@for (soldProduct of soldProducts; track soldProduct.product.name) { 
+            <button matButton>
+              Verkaufe {{ soldProduct.product.name }} für {{ soldProduct.price }}€
+            </button>
+}
+          </div>
+          <p class="centered"> Summe: {{ tradeSum }} </p>
+        </div>
         <app-product-overview
           [products]="sellableProducts()"
           [title]="'Verkaufen'"
@@ -15,9 +31,8 @@
           (tradeAction)="onSell($event)"
         ></app-product-overview>
       </div>
-      <div class="trade-container">
-        <p> Summe: {{ tradeSum }} </p>
-        <button matButton (click)="executeTrade()"> Handel abschließen </button>
+      <div class="actions">
+        <button matButton="filled" [disabled]="boughtProducts.length === 0 && soldProducts.length === 0" (click)="executeTrade()"> Handel abschließen </button>
         <button matButton (click)="startBargain()"> Feilschen </button>
       </div>
     </mat-card>

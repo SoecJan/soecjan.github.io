@@ -53,7 +53,7 @@ export class TradeActionComponent {
       (sum, tradeProduct) => sum + tradeProduct.price,
       0
     );
-    return Math.floor((sellSum - buySum) * this.bargainFactor);
+    return Math.round((sellSum - buySum) * this.bargainFactor);
   }
 
   onBuy(tradeProduct: TradeOfferProduct) {

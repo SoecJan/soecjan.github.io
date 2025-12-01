@@ -1,7 +1,5 @@
 @let state = playerInventoryState$ | async; @if (!!state) {
-<mat-card>
   <h3>Inventar - Geld: {{state.money}}€</h3>
-  <mat-divider></mat-divider>
   <ul>
     @for (productStorage of state.storageArray; track
     productStorage.product.name) {
@@ -11,5 +9,4 @@
     </li>
     }
   </ul>
-</mat-card>
 }
