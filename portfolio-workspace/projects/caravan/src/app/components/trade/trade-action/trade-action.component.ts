@@ -11,6 +11,7 @@ import {
   TradeTransaction,
   TradeOfferProduct,
   TradeProduct,
+  TradePoint,
 } from '../../../types/trade.types';
 import { TradeService } from '../../../services/trade/trade.service';
 import { MatTabsModule } from '@angular/material/tabs';
@@ -38,6 +39,7 @@ export class TradeActionComponent {
   sellableProducts: InputSignal<TradeOfferProduct[] | null> = input<
     TradeOfferProduct[] | null
   >([]);
+  playerMoney: InputSignal<number> = input<number>(0);
   boughtProducts: TradeProduct[] = [];
   soldProducts: TradeProduct[] = [];
   bargainFactor: number = 1;
@@ -53,7 +55,7 @@ export class TradeActionComponent {
       (sum, tradeProduct) => sum + tradeProduct.price,
       0
     );
-    return Math.round((sellSum - buySum) * this.bargainFactor);
+    return Math.round((sellSum - buySum) * (this.bargainFactor || 0));
   }
 
   onBuy(tradeProduct: TradeOfferProduct) {
@@ -65,6 +67,16 @@ export class TradeActionComponent {
     this.boughtProducts.push({ ...boughtProduct });
   }
 
+  onDontBuy(tradeProduct: TradeProduct) {
+    const buyableProducts = this.buyableProducts();
+    const product = buyableProducts?.find(element => element.tradeProduct.product.name == tradeProduct.product.name);
+    if (product) {product.availableAmount += 1;} else return;
+    this.buyableProducts.apply(buyableProducts);
+
+    const splicePosition = this.boughtProducts.findIndex(element => element.product.name == tradeProduct.product.name)
+    this.boughtProducts?.splice(splicePosition, 1);
+  }
+
   onSell(tradeProduct: TradeOfferProduct) {
     if (tradeProduct.availableAmount === 0) {
       return;
@@ -72,6 +84,16 @@ export class TradeActionComponent {
     tradeProduct.availableAmount -= 1;
     const soldProduct = tradeProduct.tradeProduct;
     this.soldProducts.push({ ...soldProduct });
+  }
+
+  onDontSell(tradeProduct: TradeProduct) {
+    const sellableProducts = this.sellableProducts();
+    const product = sellableProducts?.find(element => element.tradeProduct.product.name == tradeProduct.product.name);
+    if (product) {product.availableAmount += 1;} else return;
+    this.sellableProducts.apply(sellableProducts);
+
+    const splicePosition = this.soldProducts.findIndex(element => element.product.name == tradeProduct.product.name)
+    this.soldProducts?.splice(splicePosition, 1);
   }
 
   executeTrade() {

@@ -3,19 +3,25 @@ import { MatCardModule } from '@angular/material/card';
 import { MatDividerModule } from '@angular/material/divider';
 import { RouteElement } from '../../types/route.types';
 import { MatButtonModule } from '@angular/material/button';
+import { FormsModule } from '@angular/forms';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { filter, interval, map, Observable, of, take, tap } from 'rxjs';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-route',
-  imports: [MatCardModule, MatDividerModule, MatButtonModule],
+  imports: [CommonModule, FormsModule, MatCardModule, MatDividerModule, MatButtonModule, MatProgressBarModule],
   templateUrl: './route.html',
   styleUrl: './route.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Route implements OnInit {
 
-  routeChosen = output<RouteElement>();
+  routeChosen = output<RouteElement | undefined>();
   routes: RouteElement[] = []
-  
+  routeHistory: RouteElement[] = []
+  value: Observable<number> = of(100);
+  currentLocation: RouteElement | undefined;
+
   ngOnInit(): void {
     const routeA: RouteElement = {
       name: 'Route A',
@@ -38,13 +44,23 @@ export class Route implements OnInit {
       terrain: 'Hügel',
       travelTime: 3.5
     };
-  
+
     this.routes.push(routeA);
     this.routes.push(routeB);
     this.routes.push(routeC);
-  } 
+  }
 
   chooseRoute(route: RouteElement) {
-    this.routeChosen.emit(route);
+    this.routeChosen.emit(undefined);
+    this.value = interval(100).pipe(
+      take(101),
+      tap((travelValue) => {
+        if (travelValue === 100) {
+          this.routeChosen.emit(route);
+          if (this.currentLocation) this.routeHistory.push(this.currentLocation);
+          this.currentLocation = route;
+        }
+      })
+    );
   }
 }

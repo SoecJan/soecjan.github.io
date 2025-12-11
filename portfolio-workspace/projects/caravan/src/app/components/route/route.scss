@@ -1,5 +1,50 @@
-.route-choice-container {
+:host {
+    display: block;
+}
+
+.travel-container {
     display: flex;
     flex-direction: row;
+    width: 100%;
+    gap: 16px;
+}
+
+.route-choice-container {
+    display: flex;
+    width: 33%;
+    flex-direction: column;
     justify-content: space-evenly;
+    gap: 16px;
+}
+
+.route-history-container {
+    display: flex;
+    width: 33%;
+    max-width: 33%;
+    flex-direction: row;
+    justify-content: flex-end;
+    overflow: scroll;
+    overflow-y: hidden;
+    overflow-x: auto;
+    gap: 16px;
+
+    mat-card {
+        min-width: 128px;
+        width: 128px;
+    }
+}
+
+.current-location {
+    display: flex;
+    width: 33%;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.travel-progress {
+    display: flex;
+    width: 33%;
+    justify-content: center;
+    align-self: center;
+    padding: 16px;
 }

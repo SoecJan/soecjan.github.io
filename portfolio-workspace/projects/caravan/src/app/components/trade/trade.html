@@ -1,2 +1,2 @@
 <h3>{{ title$ | async }}</h3>
-<app-trade-action [buyableProducts]="buyableProducts$ | async" [sellableProducts]="sellableProducts$ | async"></app-trade-action>
+<app-trade-action [buyableProducts]="buyableProducts$ | async" [sellableProducts]="sellableProducts$ | async" [playerMoney]="(playerMoney$ | async) ?? 0"></app-trade-action>

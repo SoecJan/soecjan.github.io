@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { combineLatest, filter, map, Observable, of } from 'rxjs';
+import { combineLatest, filter, map, Observable, of, startWith } from 'rxjs';
 import { TradeOfferProduct, TradePoint } from '../../types/trade.types';
 import { PlayerInventoryStore } from '../../stores/inventory/player-inventory.store';
 import { CommonModule } from '@angular/common';
@@ -16,6 +16,7 @@ export class Trade {
   title$: Observable<string>;
   buyableProducts$: Observable<TradeOfferProduct[]>;
   sellableProducts$: Observable<TradeOfferProduct[]>;
+  playerMoney$: Observable<number>;
 
   constructor(
     private readonly tradePointService: TradePointService,
@@ -24,6 +25,7 @@ export class Trade {
     this.title$ = this.tradePointService.tradePoint$.pipe(
     map((tradePoint) => tradePoint?.name || 'Kein Handelsplatz')
   );
+  this.playerMoney$ = this.playerInventoryStore.state$.pipe(map(state => state.money || 0), startWith(25));
     this.buyableProducts$ = this.tradePointService.tradePoint$.pipe(
       filter(tradePoint => tradePoint !== undefined),
       map((tradePoint: TradePoint) => {

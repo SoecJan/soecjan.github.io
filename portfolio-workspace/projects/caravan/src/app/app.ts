@@ -19,9 +19,8 @@ export class App {
 
   constructor(private readonly tradePointService: TradePointService) {}
 
-  onRouteChosen(route: RouteElement) {
-    console.log(route);
-    this.tradePointService.next();
+  onRouteChosen(route?: RouteElement) {
+    this.tradePointService.next(route);
   }
 
   onTradeAction(trade: TradeTransaction) {

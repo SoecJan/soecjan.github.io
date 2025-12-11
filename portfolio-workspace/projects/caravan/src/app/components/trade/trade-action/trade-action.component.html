@@ -12,12 +12,12 @@
           <p class="centered">Handel</p>
           <div class="flex-column">
 @for (boughtProduct of boughtProducts; track boughtProduct.product.name) { 
-            <button matButton>
+            <button matButton (click)="onDontBuy(boughtProduct)">
               Kaufe {{ boughtProduct.product.name }} für {{ boughtProduct.price }}€
             </button>
 }
 @for (soldProduct of soldProducts; track soldProduct.product.name) { 
-            <button matButton>
+            <button matButton (click)="onDontSell(soldProduct)">
               Verkaufe {{ soldProduct.product.name }} für {{ soldProduct.price }}€
             </button>
 }
@@ -32,7 +32,7 @@
         ></app-product-overview>
       </div>
       <div class="actions">
-        <button matButton="filled" [disabled]="boughtProducts.length === 0 && soldProducts.length === 0" (click)="executeTrade()"> Handel abschließen </button>
+        <button matButton="filled" [disabled]="(boughtProducts.length === 0 && soldProducts.length === 0) || playerMoney() + tradeSum < 0" (click)="executeTrade()"> Handel abschließen </button>
         <button matButton (click)="startBargain()"> Feilschen </button>
       </div>
     </mat-card>

@@ -1,17 +1,55 @@
+@let travelProgress = value | async;
 
-    <h3>Weiterfahrt</h3>
-    <div class="route-choice-container">
-        
-        @for (route of routes; track route.name) {
+<h3>Weiterfahrt</h3>
+<div class="travel-container">
+    <div class="route-history-container">
+        <p>Historie:</p>
+        @for (route of routeHistory; track route.name) {
         <mat-card>
             <p>{{route.name}}</p>
-            <ul>
+            <!-- <ul>
                 <li>Typ: {{route.type}}</li>
                 <li>Distanz: {{route.distance}}</li>
                 <li>Gelände: {{route.terrain}}</li>
                 <li>Dauer: {{route.travelTime}}h</li>
-            </ul>
-            <button matButton (click)="chooseRoute(route)">Wählen</button>
+            </ul> -->
         </mat-card>
         }
     </div>
+    <div class="current-location">
+        <p>Aktueller Standort:</p>
+        @if (travelProgress !== 100) {
+        <mat-card>
+            <p>Auf Reise...</p>
+            <p>Fortschritt: {{ travelProgress }}%</p>
+        </mat-card>
+        <div class="travel-progress">
+            <mat-progress-bar mode="determinate" [value]="travelProgress"></mat-progress-bar>
+        </div>
+        } @else {
+        <mat-card>
+            <p>{{ currentLocation?.name}}</p>
+            <ul>
+                <li>Typ: </li>
+                <li>Gelände: </li>
+            </ul>
+        </mat-card>
+        <div class="travel-progress"></div>
+        }
+    </div>
+    <div class="route-choice-container">
+        <p>Nächste Standorte:</p>
+        @for (route of routes; track route.name) {
+        <mat-card>
+            <p>{{route.name}}</p>
+            <!-- <ul>
+                <li>Typ: {{route.type}}</li>
+                <li>Distanz: {{route.distance}}</li>
+                <li>Gelände: {{route.terrain}}</li>
+                <li>Dauer: {{route.travelTime}}h</li>
+            </ul> -->
+            <button matButton [disabled]="travelProgress !== 100" (click)="chooseRoute(route)">Wählen</button>
+        </mat-card>
+        }
+    </div>
+</div>
